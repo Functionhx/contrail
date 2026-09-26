@@ -7,7 +7,7 @@ source 一律记为 claude-code：
 
 1. DeepSeek：平台逐日账单（精确），扣掉本地日志已经记到的部分。
 2. 智谱 GLM：6/14–6/26 用平台账单（精确）；3–8 月其余日子按套餐额度估算。
-3. Claude：1–4 月按作者提供的总花费 $38,000 估算。
+3. Claude：1–5 月按作者提供的总花费 $38,000 估算。
 
 估算的每一条参数及其依据都写在下面。输入都在 backfill/inputs/，重复运行产出
 同样的字节。
@@ -206,11 +206,12 @@ for month, total in GLM_MONTH_TOTAL.items():
             add(d, model, glm_cost(model, inp, hit, out), input=inp, cacheRead=hit, output=out)
 
 
-# ── 3. Claude：1–4 月，总花费 $38,000 ──────────────────────────────────────
+# ── 3. Claude ───────────────────────────────────────────────────────────────
 #
-# 按月：2 月是寒假，最活跃；3 月初也活跃；1 月中旬起放假；4 月回到学期中。
+# 1–5 月：总花费 $38,000（作者提供）。2 月寒假最活跃，3 月初也活跃；1 月中旬起
+# 放假；4、5 月回到学期中。
 CLAUDE_TOTAL = 38_000
-CLAUDE_MONTH_SHARE = {1: 0.20, 2: 0.40, 3: 0.28, 4: 0.12}
+CLAUDE_MONTH_SHARE = {1: 0.16, 2: 0.27, 3: 0.23, 4: 0.18, 5: 0.16}
 
 
 def claude_day_weight(d: dt.date) -> float:
@@ -223,39 +224,68 @@ def claude_day_weight(d: dt.date) -> float:
     return 1.0
 
 
-# 按花费拆到模型上。Opus 为主，子代理调用较弱的 Sonnet / Haiku，一部分走 Fast。
-#   Opus 4.6：2026-02-04 发布，之前是 Opus 4.5（同价 $5 / $25）
-#   Sonnet 4.6：2026-02-17 发布，之前是 Sonnet 4.5（同价 $3 / $15）
-#   Opus 4.6 Fast：2026-02-07 上线，6 倍价；2/7–2/16 首发期五折（3 倍价）
-SPLIT = {"opus": 0.80, "fast": 0.12, "sonnet": 0.06, "haiku": 0.02}
+def opus_model(d: dt.date) -> str:
+    """按官方发布时间切换主模型（四代标准价相同：$5 / $25）。"""
+    if d < D("2026-02-04"):
+        return "claude-opus-4-5"
+    if d < D("2026-04-16"):  # Opus 4.6：2026-02-04
+        return "claude-opus-4-6"
+    if d < D("2026-05-28"):  # Opus 4.7：2026-04-16
+        return "claude-opus-4-7"
+    return "claude-opus-4-8"  # Opus 4.8：2026-05-28
+
+
+def fast_price_ratio(d: dt.date) -> float | None:
+    """Fast 模式相对标准价的倍数；None 表示当时还没有 Fast。
+
+    Opus 4.6 Fast 2026-02-07 上线，6 倍价，2/7–2/16 首发期五折（3 倍）；
+    Opus 4.7 Fast 同为 6 倍；Opus 4.8 Fast 降为 2 倍。
+    """
+    if d < D("2026-02-07"):
+        return None
+    if d <= D("2026-02-16"):
+        return 3.0
+    if d < D("2026-05-28"):
+        return 6.0
+    return 2.0
+
+
+# 花费拆分：
+#   Fast：12%（作者当时会自己开 /fast）。
+#   子代理：作者两台机器的 Claude Code 会话记录实测，子代理占花费 2.9%（Mac）与
+#   1.9%（Linux），取 2.4%；其中约 95% 继承主 agent 的 Opus，约 5% 为 Sonnet，
+#   会话记录里没有出现 Haiku。继承 Opus 的那部分与主 agent 同价同模型，并入 Opus 行。
+FAST_SHARE = 0.12
+SUBAGENT_SHARE = 0.024
+SUBAGENT_SONNET = 0.05
+SONNET_SHARE = SUBAGENT_SHARE * SUBAGENT_SONNET
 
 # token 构成与每美元 token 数取自作者本地 Claude Code 实测的 Opus（同为 $5 / $25 价位）：
-# 缓存读约 98.3%，每美元约 140.8 万 token。其它模型按官方价格比例换算。
+# 缓存读约 98.3%，每美元约 140.8 万 token。Sonnet 按官方价格比例（0.6 倍）换算。
 OPUS_TOKENS_PER_USD = 1_407_593
 OPUS_MIX = {"input": 0.00002, "output": 0.00320, "cacheRead": 0.98270, "cacheWrite": 0.01408}
-PRICE_RATIO = {"opus": 1.0, "sonnet": 0.6, "haiku": 0.2}
+
+
+def add_claude_day(d: dt.date, cost: float) -> None:
+    ratio = fast_price_ratio(d)
+    opus = opus_model(d)
+    sonnet = "claude-sonnet-4-6" if d >= D("2026-02-17") else "claude-sonnet-4-5"  # Sonnet 4.6：2026-02-17
+    fast = FAST_SHARE if ratio else 0.0
+    parts = [(opus, 1 - fast - SONNET_SHARE, 1.0), (sonnet, SONNET_SHARE, 0.6)]
+    if ratio:
+        parts.append((f"{opus}-fast", fast, ratio))
+    for model, share, price_ratio in parts:
+        c = cost * share
+        tokens = c * OPUS_TOKENS_PER_USD / price_ratio
+        add(d, model, c, **{k: tokens * v for k, v in OPUS_MIX.items()})
+
 
 for month, share in CLAUDE_MONTH_SHARE.items():
     ds = list(month_days(2026, month))
     weights = {d: claude_day_weight(d) for d in ds}
     total_w = sum(weights.values())
     for d, w in weights.items():
-        cost = CLAUDE_TOTAL * share * w / total_w
-        opus = "claude-opus-4-6" if d >= D("2026-02-04") else "claude-opus-4-5"
-        sonnet = "claude-sonnet-4-6" if d >= D("2026-02-17") else "claude-sonnet-4-5"
-        fast_on = d >= D("2026-02-07")
-        fast_ratio = 3.0 if d <= D("2026-02-16") else 6.0
-        parts = [
-            (opus, SPLIT["opus"] + (0 if fast_on else SPLIT["fast"]), PRICE_RATIO["opus"]),
-            (sonnet, SPLIT["sonnet"], PRICE_RATIO["sonnet"]),
-            ("claude-haiku-4-5", SPLIT["haiku"], PRICE_RATIO["haiku"]),
-        ]
-        if fast_on:
-            parts.append(("claude-opus-4-6-fast", SPLIT["fast"], fast_ratio))
-        for model, s, ratio in parts:
-            c = cost * s
-            tokens = c * OPUS_TOKENS_PER_USD / ratio
-            add(d, model, c, **{k: tokens * v for k, v in OPUS_MIX.items()})
+        add_claude_day(d, CLAUDE_TOTAL * share * w / total_w)
 
 
 # ── 组装 v2 发布结构 ────────────────────────────────────────────────────────
