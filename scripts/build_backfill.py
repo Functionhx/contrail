@@ -7,7 +7,7 @@ source 一律记为 claude-code：
 
 1. DeepSeek：平台逐日账单（精确），扣掉本地日志已经记到的部分。
 2. 智谱 GLM：6/14–6/26 用平台账单（精确）；3–8 月其余日子按套餐额度估算。
-3. Claude：1–5 月按作者提供的总花费 $38,000 估算。
+3. Claude：1–5 月按作者提供的总花费 $38,000 估算；6–7 月按 Max 5x 周额度用到约 90% 估算。
 
 估算的每一条参数及其依据都写在下面。输入都在 backfill/inputs/，重复运行产出
 同样的字节。
@@ -286,6 +286,44 @@ for month, share in CLAUDE_MONTH_SHARE.items():
     total_w = sum(weights.values())
     for d, w in weights.items():
         add_claude_day(d, CLAUDE_TOTAL * share * w / total_w)
+
+
+# 6–7 月：Kaggle agent 期间，Claude Max 5x 套餐周额度用到约 90%（作者提供）。
+#
+# 订阅额度没有官方 token 数，用作者自己的数据校准：2026-09-14 之后（周额度为基准的
+# 1.25 倍），作者在 Pro 套餐上每周用到约 85%，两台机器实测合计每周约 $499.6 等值：
+#   Pro 基准周额度 = 499.6 / 0.85 / 1.25 ≈ $470
+#   Max 5x 基准周额度 = 5 × Pro
+# 周额度的历次调整：5/6 只翻倍了 5 小时额度（周额度不变）；7/18 起周额度临时 +50%。
+# 每周都用到约 90%，所以按天平均分配。订阅用量里没有 Fast（Fast 另行计费）。
+PRO_WEEKLY_CALIBRATION = {"usd_per_week": 499.6, "utilization": 0.85, "limit_multiplier": 1.25}
+PRO_WEEKLY_BASE = (PRO_WEEKLY_CALIBRATION["usd_per_week"]
+                   / PRO_WEEKLY_CALIBRATION["utilization"]
+                   / PRO_WEEKLY_CALIBRATION["limit_multiplier"])
+MAX5X_WEEKLY_BASE = 5 * PRO_WEEKLY_BASE
+KAGGLE_UTILIZATION = 0.90
+
+
+def weekly_limit_multiplier(d: dt.date) -> float:
+    return 1.5 if d >= D("2026-07-18") else 1.0
+
+
+def kaggle_opus_model(d: dt.date) -> str:
+    return "claude-opus-5" if d >= D("2026-07-24") else "claude-opus-4-8"  # Opus 5：2026-07-24
+
+
+def kaggle_sonnet(d: dt.date) -> tuple[str, float]:
+    # Sonnet 5：2026-06-30 发布，$2 / $10（Sonnet 4.6 为 $3 / $15）
+    return ("claude-sonnet-5", 0.4) if d >= D("2026-06-30") else ("claude-sonnet-4-6", 0.6)
+
+
+for d in days("2026-06-01", "2026-07-31"):
+    cost = MAX5X_WEEKLY_BASE * weekly_limit_multiplier(d) * KAGGLE_UTILIZATION / 7
+    sonnet, sonnet_ratio = kaggle_sonnet(d)
+    for model, share, price_ratio in ((kaggle_opus_model(d), 1 - SONNET_SHARE, 1.0), (sonnet, SONNET_SHARE, sonnet_ratio)):
+        c = cost * share
+        tokens = c * OPUS_TOKENS_PER_USD / price_ratio
+        add(d, model, c, **{k: tokens * v for k, v in OPUS_MIX.items()})
 
 
 # ── 组装 v2 发布结构 ────────────────────────────────────────────────────────
