@@ -1,8 +1,8 @@
 node_modules/
 
 # 本地状态：一律不进仓库
-# （正常情况下这些都在 ~/.vibe-local/，此处仅为防手滑）
-.vibe-local/
+# （正常情况下这些都在 ~/.contrail/，此处仅为防手滑）
+.contrail/
 cache/
 mirror/
 manual.jsonl
@@ -10,3 +10,7 @@ manual.jsonl
 
 .DS_Store
 npm-debug.log*
+
+# 构建时生成的站点数据与产物
+dashboard/public/data/
+dashboard/dist/

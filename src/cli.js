@@ -116,7 +116,7 @@ async function publishCommand(flags) {
   const host = flags.get('host') || localHostname();
   const outPath = flags.get('out') || defaultOutPath(repoRoot, host);
 
-  const res = await publish({ outPath, host });
+  const res = await publish({ outPath, host, rebuild: flags.has('rebuild') });
 
   const days = res.payload.days;
   const total = days.reduce((a, d) => a + d.cost, 0);

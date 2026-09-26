@@ -138,7 +138,14 @@ export function buildPayload(buckets, prices, { host, now = new Date(), retentio
           || (a.model < b.model ? -1 : a.model > b.model ? 1 : 0)),
     }));
 
-  // 顶层汇总。让页面直接读，不用自己遍历累加 —— 也保证"总量"的定义只有一处。
+  return finalizePayload(days, { host, now, unpricedModels: [...unpriced] });
+}
+
+/**
+ * 由逐日数据组装完整的发布结构（顶层汇总 + 元数据）。
+ * 让页面直接读汇总，不用自己遍历累加 —— 也保证「总量」的定义只有一处。
+ */
+function finalizePayload(days, { host, now, unpricedModels }) {
   const cols = zeroColumns();
   let cost = 0;
   let conversations = 0;
@@ -167,9 +174,54 @@ export function buildPayload(buckets, prices, { host, now = new Date(), retentio
     },
     // 查不到价的模型按 $0 计。公开出来是为了让页面标明「花费是下界」，
     // 而不是让一个漏配的模型静默吞掉一块花费。
-    unpricedModels: [...unpriced].sort(),
+    unpricedModels: [...new Set(unpricedModels)].sort(),
     days,
   };
+}
+
+/**
+ * 与上一次发布的文件按天合并：**已经发布过的历史不因日志被清理而消失**。
+ *
+ * 为什么需要：发布是按「现存日志」整份重算的，而 Claude Code 默认只保留 30 天
+ * 会话记录。不合并的话，日志一被清理，网站上那几天的数字就跟着归零——这在
+ * 2026-09 实测发生过：DeepSeek 平台记账 330 亿 token，本地日志只剩一成。
+ *
+ * 规则（逐日）：
+ *   - 新算出的这一天**不存在**，或 tokensInclCache **比上次发布的小** → 保留上次的
+ *     整天记录。日志只会因清理而变少，同一天的真实用量不会减少。
+ *   - 其余情况用新值（当天还在增长、新出现的日子）。
+ * 整天取舍而不是逐行取 max：逐行混拼会得到一天里「一半旧一半新」的数字，
+ * 各列之间对不上。
+ *
+ * 代价：如果某次 parser 修复让某天的数字**合理地**变小（比如修掉重复计数），
+ * 合并会把旧的大数字保留下来。这时用 `publish --rebuild` 显式重建。
+ *
+ * **纯函数**。`previous` 为 null 或版本不符时原样返回 `next`。
+ */
+export function mergeWithPrevious(previous, next, { now = new Date(), retentionDays = RETENTION_DAYS } = {}) {
+  if (!previous || previous.schemaVersion !== next.schemaVersion || previous.host !== next.host) return next;
+
+  const cutoff = cutoffKey(todayKey(now), retentionDays);
+  const byDate = new Map(next.days.map((d) => [d.date, d]));
+  const kept = [];
+  for (const old of previous.days ?? []) {
+    if (old.date < cutoff) continue;
+    const fresh = byDate.get(old.date);
+    if (!fresh || fresh.tokensInclCache < old.tokensInclCache) {
+      byDate.set(old.date, old);
+      kept.push(old);
+    }
+  }
+  if (!kept.length) return next;
+
+  const days = [...byDate.values()].sort((a, b) => (a.date < b.date ? -1 : 1));
+  // 保留下来的旧日子里若有当时无价的模型，提醒也要一并保留
+  const keptModels = new Set(kept.flatMap((d) => d.rows.map((r) => r.model)));
+  const unpricedModels = [
+    ...next.unpricedModels,
+    ...(previous.unpricedModels ?? []).filter((m) => keptModels.has(m)),
+  ];
+  return finalizePayload(days, { host: next.host, now, unpricedModels });
 }
 
 /** 保留窗口的左边界日键。 */
@@ -219,12 +271,24 @@ export async function publish({
   now = new Date(),
   extraRoots = {},
   codexExtraHome,
+  rebuild = false,
 } = {}) {
   const prices = loadPrices();
   const { buckets, sessions } = await collect({ hostname: host, extraRoots, codexExtraHome });
-  const payload = buildPayload(buckets, prices, { host, now, sessions });
+  const fresh = buildPayload(buckets, prices, { host, now, sessions });
+  const payload = rebuild ? fresh : mergeWithPrevious(readPrevious(outPath), fresh, { now });
   const written = writeIfChanged(outPath, serialize(payload));
   return { path: outPath, payload, written, unchanged: !written };
+}
+
+/** 上一次发布的文件；不存在或读不了时为 null（等同首次发布）。 */
+function readPrevious(outPath) {
+  if (!existsSync(outPath)) return null;
+  try {
+    return JSON.parse(readFileSync(outPath, 'utf8'));
+  } catch {
+    return null;
+  }
 }
 
 /** 默认输出路径：`<repo>/data/<host>.json`。 */

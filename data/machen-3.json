@@ -1,0 +1,2844 @@
+{
+  "host": "machen-3",
+  "schemaVersion": 2,
+  "updatedAt": "2026-09-26T08:42:42Z",
+  "timezone": "UTC+8",
+  "totals": {
+    "cost": 6371.1074,
+    "input": 239276873,
+    "output": 30445739,
+    "reasoning": 10264351,
+    "cacheRead": 9338911524,
+    "cacheWrite": 22742876,
+    "tokens": 302729839,
+    "tokensInclCache": 9641641363,
+    "conversations": 467,
+    "turns": 20810,
+    "days": 80,
+    "firstDate": "2026-02-28",
+    "lastDate": "2026-09-26"
+  },
+  "unpricedModels": [
+    "gpt-5.3-codex-spark"
+  ],
+  "days": [
+    {
+      "date": "2026-02-28",
+      "cost": 0.0264,
+      "input": 50133,
+      "output": 4013,
+      "reasoning": 0,
+      "cacheRead": 234240,
+      "cacheWrite": 0,
+      "tokens": 54146,
+      "tokensInclCache": 288386,
+      "conversations": 2,
+      "turns": 2,
+      "rows": [
+        {
+          "source": "opencode",
+          "model": "gpt-5-mini",
+          "cost": 0.0264,
+          "input": 50133,
+          "output": 4013,
+          "reasoning": 0,
+          "cacheRead": 234240,
+          "cacheWrite": 0,
+          "tokens": 54146,
+          "tokensInclCache": 288386
+        }
+      ]
+    },
+    {
+      "date": "2026-03-25",
+      "cost": 9.6632,
+      "input": 1476840,
+      "output": 82212,
+      "reasoning": 82967,
+      "cacheRead": 13973760,
+      "cacheWrite": 0,
+      "tokens": 1642019,
+      "tokensInclCache": 15615779,
+      "conversations": 4,
+      "turns": 44,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.4",
+          "cost": 9.6632,
+          "input": 1476840,
+          "output": 82212,
+          "reasoning": 82967,
+          "cacheRead": 13973760,
+          "cacheWrite": 0,
+          "tokens": 1642019,
+          "tokensInclCache": 15615779
+        }
+      ]
+    },
+    {
+      "date": "2026-03-26",
+      "cost": 2.7825,
+      "input": 363658,
+      "output": 21443,
+      "reasoning": 26870,
+      "cacheRead": 4594688,
+      "cacheWrite": 0,
+      "tokens": 411971,
+      "tokensInclCache": 5006659,
+      "conversations": 0,
+      "turns": 0,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.4",
+          "cost": 2.7825,
+          "input": 363658,
+          "output": 21443,
+          "reasoning": 26870,
+          "cacheRead": 4594688,
+          "cacheWrite": 0,
+          "tokens": 411971,
+          "tokensInclCache": 5006659
+        }
+      ]
+    },
+    {
+      "date": "2026-05-01",
+      "cost": 0,
+      "input": 0,
+      "output": 0,
+      "reasoning": 0,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "tokens": 0,
+      "tokensInclCache": 0,
+      "conversations": 1,
+      "turns": 3,
+      "rows": []
+    },
+    {
+      "date": "2026-05-23",
+      "cost": 0.2135,
+      "input": 18415,
+      "output": 2197,
+      "reasoning": 547,
+      "cacheRead": 78208,
+      "cacheWrite": 0,
+      "tokens": 21159,
+      "tokensInclCache": 99367,
+      "conversations": 2,
+      "turns": 3,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.5",
+          "cost": 0.2135,
+          "input": 18415,
+          "output": 2197,
+          "reasoning": 547,
+          "cacheRead": 78208,
+          "cacheWrite": 0,
+          "tokens": 21159,
+          "tokensInclCache": 99367
+        }
+      ]
+    },
+    {
+      "date": "2026-05-25",
+      "cost": 6.0449,
+      "input": 696288,
+      "output": 33234,
+      "reasoning": 11091,
+      "cacheRead": 4276608,
+      "cacheWrite": 0,
+      "tokens": 740613,
+      "tokensInclCache": 5017221,
+      "conversations": 3,
+      "turns": 19,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.5",
+          "cost": 6.0449,
+          "input": 526154,
+          "output": 33037,
+          "reasoning": 10940,
+          "cacheRead": 4189696,
+          "cacheWrite": 0,
+          "tokens": 570131,
+          "tokensInclCache": 4759827
+        },
+        {
+          "source": "codex",
+          "model": "codex-auto-review",
+          "cost": 0,
+          "input": 170134,
+          "output": 197,
+          "reasoning": 151,
+          "cacheRead": 86912,
+          "cacheWrite": 0,
+          "tokens": 170482,
+          "tokensInclCache": 257394
+        }
+      ]
+    },
+    {
+      "date": "2026-05-26",
+      "cost": 0.7258,
+      "input": 54538,
+      "output": 7278,
+      "reasoning": 2901,
+      "cacheRead": 295424,
+      "cacheWrite": 0,
+      "tokens": 64717,
+      "tokensInclCache": 360141,
+      "conversations": 1,
+      "turns": 2,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.5",
+          "cost": 0.7258,
+          "input": 54538,
+          "output": 7278,
+          "reasoning": 2901,
+          "cacheRead": 295424,
+          "cacheWrite": 0,
+          "tokens": 64717,
+          "tokensInclCache": 360141
+        }
+      ]
+    },
+    {
+      "date": "2026-06-05",
+      "cost": 0.0834,
+      "input": 7353,
+      "output": 408,
+      "reasoning": 793,
+      "cacheRead": 21248,
+      "cacheWrite": 0,
+      "tokens": 8554,
+      "tokensInclCache": 29802,
+      "conversations": 1,
+      "turns": 2,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.5",
+          "cost": 0.0834,
+          "input": 7353,
+          "output": 408,
+          "reasoning": 793,
+          "cacheRead": 21248,
+          "cacheWrite": 0,
+          "tokens": 8554,
+          "tokensInclCache": 29802
+        }
+      ]
+    },
+    {
+      "date": "2026-06-16",
+      "cost": 0.5422,
+      "input": 57885,
+      "output": 1384,
+      "reasoning": 2945,
+      "cacheRead": 245888,
+      "cacheWrite": 0,
+      "tokens": 62214,
+      "tokensInclCache": 308102,
+      "conversations": 1,
+      "turns": 3,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.5",
+          "cost": 0.5422,
+          "input": 57885,
+          "output": 1384,
+          "reasoning": 2945,
+          "cacheRead": 245888,
+          "cacheWrite": 0,
+          "tokens": 62214,
+          "tokensInclCache": 308102
+        }
+      ]
+    },
+    {
+      "date": "2026-06-17",
+      "cost": 12.23,
+      "input": 683764,
+      "output": 43727,
+      "reasoning": 26792,
+      "cacheRead": 13391232,
+      "cacheWrite": 0,
+      "tokens": 754283,
+      "tokensInclCache": 14145515,
+      "conversations": 5,
+      "turns": 22,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.5",
+          "cost": 12.23,
+          "input": 683764,
+          "output": 43727,
+          "reasoning": 26792,
+          "cacheRead": 13391232,
+          "cacheWrite": 0,
+          "tokens": 754283,
+          "tokensInclCache": 14145515
+        }
+      ]
+    },
+    {
+      "date": "2026-06-21",
+      "cost": 1.2966,
+      "input": 144744,
+      "output": 11168,
+      "reasoning": 5042,
+      "cacheRead": 173184,
+      "cacheWrite": 0,
+      "tokens": 160954,
+      "tokensInclCache": 334138,
+      "conversations": 1,
+      "turns": 12,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.5",
+          "cost": 1.2966,
+          "input": 144744,
+          "output": 11168,
+          "reasoning": 5042,
+          "cacheRead": 173184,
+          "cacheWrite": 0,
+          "tokens": 160954,
+          "tokensInclCache": 334138
+        }
+      ]
+    },
+    {
+      "date": "2026-06-22",
+      "cost": 0.6546,
+      "input": 99146,
+      "output": 1432,
+      "reasoning": 3822,
+      "cacheRead": 2432,
+      "cacheWrite": 0,
+      "tokens": 104400,
+      "tokensInclCache": 106832,
+      "conversations": 0,
+      "turns": 0,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.5",
+          "cost": 0.6546,
+          "input": 99146,
+          "output": 1432,
+          "reasoning": 3822,
+          "cacheRead": 2432,
+          "cacheWrite": 0,
+          "tokens": 104400,
+          "tokensInclCache": 106832
+        }
+      ]
+    },
+    {
+      "date": "2026-06-25",
+      "cost": 20.7956,
+      "input": 1935585,
+      "output": 49026,
+      "reasoning": 36065,
+      "cacheRead": 17129984,
+      "cacheWrite": 0,
+      "tokens": 2020676,
+      "tokensInclCache": 19150660,
+      "conversations": 1,
+      "turns": 250,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.5",
+          "cost": 20.7956,
+          "input": 1935585,
+          "output": 49026,
+          "reasoning": 36065,
+          "cacheRead": 17129984,
+          "cacheWrite": 0,
+          "tokens": 2020676,
+          "tokensInclCache": 19150660
+        }
+      ]
+    },
+    {
+      "date": "2026-06-26",
+      "cost": 53.3986,
+      "input": 3019287,
+      "output": 229002,
+      "reasoning": 169224,
+      "cacheRead": 52710784,
+      "cacheWrite": 0,
+      "tokens": 3417513,
+      "tokensInclCache": 56128297,
+      "conversations": 3,
+      "turns": 38,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.5",
+          "cost": 53.3986,
+          "input": 3019287,
+          "output": 229002,
+          "reasoning": 169224,
+          "cacheRead": 52710784,
+          "cacheWrite": 0,
+          "tokens": 3417513,
+          "tokensInclCache": 56128297
+        }
+      ]
+    },
+    {
+      "date": "2026-06-27",
+      "cost": 405.812,
+      "input": 24346050,
+      "output": 1493172,
+      "reasoning": 1207563,
+      "cacheRead": 406119424,
+      "cacheWrite": 0,
+      "tokens": 27046785,
+      "tokensInclCache": 433166209,
+      "conversations": 11,
+      "turns": 183,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.5",
+          "cost": 405.812,
+          "input": 24346050,
+          "output": 1493172,
+          "reasoning": 1207563,
+          "cacheRead": 406119424,
+          "cacheWrite": 0,
+          "tokens": 27046785,
+          "tokensInclCache": 433166209
+        }
+      ]
+    },
+    {
+      "date": "2026-06-28",
+      "cost": 177.7375,
+      "input": 11221101,
+      "output": 725664,
+      "reasoning": 483308,
+      "cacheRead": 170725632,
+      "cacheWrite": 0,
+      "tokens": 12430073,
+      "tokensInclCache": 183155705,
+      "conversations": 1,
+      "turns": 114,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.5",
+          "cost": 177.7375,
+          "input": 11221101,
+          "output": 725664,
+          "reasoning": 483308,
+          "cacheRead": 170725632,
+          "cacheWrite": 0,
+          "tokens": 12430073,
+          "tokensInclCache": 183155705
+        }
+      ]
+    },
+    {
+      "date": "2026-06-29",
+      "cost": 74.9486,
+      "input": 4726333,
+      "output": 259639,
+      "reasoning": 138029,
+      "cacheRead": 78773760,
+      "cacheWrite": 0,
+      "tokens": 5124001,
+      "tokensInclCache": 83897761,
+      "conversations": 1,
+      "turns": 15,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.5",
+          "cost": 74.9486,
+          "input": 4726333,
+          "output": 259639,
+          "reasoning": 138029,
+          "cacheRead": 78773760,
+          "cacheWrite": 0,
+          "tokens": 5124001,
+          "tokensInclCache": 83897761
+        }
+      ]
+    },
+    {
+      "date": "2026-06-30",
+      "cost": 40.2411,
+      "input": 2368025,
+      "output": 146697,
+      "reasoning": 89304,
+      "cacheRead": 42641920,
+      "cacheWrite": 0,
+      "tokens": 2604026,
+      "tokensInclCache": 45245946,
+      "conversations": 0,
+      "turns": 0,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.5",
+          "cost": 40.2411,
+          "input": 2368025,
+          "output": 146697,
+          "reasoning": 89304,
+          "cacheRead": 42641920,
+          "cacheWrite": 0,
+          "tokens": 2604026,
+          "tokensInclCache": 45245946
+        }
+      ]
+    },
+    {
+      "date": "2026-07-01",
+      "cost": 7.789,
+      "input": 502821,
+      "output": 28821,
+      "reasoning": 14550,
+      "cacheRead": 7947520,
+      "cacheWrite": 0,
+      "tokens": 546192,
+      "tokensInclCache": 8493712,
+      "conversations": 0,
+      "turns": 0,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.5",
+          "cost": 7.789,
+          "input": 502821,
+          "output": 28821,
+          "reasoning": 14550,
+          "cacheRead": 7947520,
+          "cacheWrite": 0,
+          "tokens": 546192,
+          "tokensInclCache": 8493712
+        }
+      ]
+    },
+    {
+      "date": "2026-07-02",
+      "cost": 50.6812,
+      "input": 2349245,
+      "output": 172299,
+      "reasoning": 76295,
+      "cacheRead": 62954240,
+      "cacheWrite": 0,
+      "tokens": 2597839,
+      "tokensInclCache": 65552079,
+      "conversations": 0,
+      "turns": 0,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.5",
+          "cost": 50.6812,
+          "input": 2349245,
+          "output": 172299,
+          "reasoning": 76295,
+          "cacheRead": 62954240,
+          "cacheWrite": 0,
+          "tokens": 2597839,
+          "tokensInclCache": 65552079
+        }
+      ]
+    },
+    {
+      "date": "2026-07-03",
+      "cost": 73.8747,
+      "input": 4117597,
+      "output": 255691,
+      "reasoning": 118356,
+      "cacheRead": 84130688,
+      "cacheWrite": 0,
+      "tokens": 4491644,
+      "tokensInclCache": 88622332,
+      "conversations": 0,
+      "turns": 0,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.5",
+          "cost": 73.8747,
+          "input": 4117597,
+          "output": 255691,
+          "reasoning": 118356,
+          "cacheRead": 84130688,
+          "cacheWrite": 0,
+          "tokens": 4491644,
+          "tokensInclCache": 88622332
+        }
+      ]
+    },
+    {
+      "date": "2026-07-11",
+      "cost": 15.0857,
+      "input": 1565493,
+      "output": 53604,
+      "reasoning": 23002,
+      "cacheRead": 18228992,
+      "cacheWrite": 0,
+      "tokens": 1642099,
+      "tokensInclCache": 19871091,
+      "conversations": 5,
+      "turns": 18,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol",
+          "cost": 15.0857,
+          "input": 1565493,
+          "output": 53604,
+          "reasoning": 23002,
+          "cacheRead": 18228992,
+          "cacheWrite": 0,
+          "tokens": 1642099,
+          "tokensInclCache": 19871091
+        }
+      ]
+    },
+    {
+      "date": "2026-07-13",
+      "cost": 12.2851,
+      "input": 919037,
+      "output": 54298,
+      "reasoning": 28949,
+      "cacheRead": 17360128,
+      "cacheWrite": 0,
+      "tokens": 1002284,
+      "tokensInclCache": 18362412,
+      "conversations": 4,
+      "turns": 20,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol",
+          "cost": 12.2851,
+          "input": 919037,
+          "output": 54298,
+          "reasoning": 28949,
+          "cacheRead": 17360128,
+          "cacheWrite": 0,
+          "tokens": 1002284,
+          "tokensInclCache": 18362412
+        }
+      ]
+    },
+    {
+      "date": "2026-07-14",
+      "cost": 67.2653,
+      "input": 5765767,
+      "output": 276343,
+      "reasoning": 186070,
+      "cacheRead": 94522368,
+      "cacheWrite": 0,
+      "tokens": 6228180,
+      "tokensInclCache": 100750548,
+      "conversations": 18,
+      "turns": 82,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol",
+          "cost": 64.2747,
+          "input": 5174130,
+          "output": 251507,
+          "reasoning": 176985,
+          "cacheRead": 87520768,
+          "cacheWrite": 0,
+          "tokens": 5602622,
+          "tokensInclCache": 93123390
+        },
+        {
+          "source": "codex",
+          "model": "gpt-5.6-terra",
+          "cost": 2.9906,
+          "input": 591637,
+          "output": 24836,
+          "reasoning": 9085,
+          "cacheRead": 7001600,
+          "cacheWrite": 0,
+          "tokens": 625558,
+          "tokensInclCache": 7627158
+        }
+      ]
+    },
+    {
+      "date": "2026-07-15",
+      "cost": 44.8734,
+      "input": 4108712,
+      "output": 235802,
+      "reasoning": 155397,
+      "cacheRead": 81397376,
+      "cacheWrite": 0,
+      "tokens": 4499911,
+      "tokensInclCache": 85897287,
+      "conversations": 11,
+      "turns": 24,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol",
+          "cost": 38.1327,
+          "input": 2719337,
+          "output": 158274,
+          "reasoning": 98629,
+          "cacheRead": 55293184,
+          "cacheWrite": 0,
+          "tokens": 2976240,
+          "tokensInclCache": 58269424
+        },
+        {
+          "source": "codex",
+          "model": "gpt-5.6-terra",
+          "cost": 6.7407,
+          "input": 1091173,
+          "output": 58137,
+          "reasoning": 36520,
+          "cacheRead": 17112576,
+          "cacheWrite": 0,
+          "tokens": 1185830,
+          "tokensInclCache": 18298406
+        },
+        {
+          "source": "codex",
+          "model": "gpt-5.3-codex-spark",
+          "cost": 0,
+          "input": 298202,
+          "output": 19391,
+          "reasoning": 20248,
+          "cacheRead": 8991616,
+          "cacheWrite": 0,
+          "tokens": 337841,
+          "tokensInclCache": 9329457
+        }
+      ]
+    },
+    {
+      "date": "2026-07-16",
+      "cost": 43.2446,
+      "input": 2182694,
+      "output": 192632,
+      "reasoning": 95254,
+      "cacheRead": 71890176,
+      "cacheWrite": 0,
+      "tokens": 2470580,
+      "tokensInclCache": 74360756,
+      "conversations": 2,
+      "turns": 14,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol",
+          "cost": 43.2446,
+          "input": 2182694,
+          "output": 192632,
+          "reasoning": 95254,
+          "cacheRead": 71890176,
+          "cacheWrite": 0,
+          "tokens": 2470580,
+          "tokensInclCache": 74360756
+        }
+      ]
+    },
+    {
+      "date": "2026-07-18",
+      "cost": 4.887,
+      "input": 391058,
+      "output": 32052,
+      "reasoning": 15732,
+      "cacheRead": 5917696,
+      "cacheWrite": 0,
+      "tokens": 438842,
+      "tokensInclCache": 6356538,
+      "conversations": 1,
+      "turns": 6,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol",
+          "cost": 4.887,
+          "input": 391058,
+          "output": 32052,
+          "reasoning": 15732,
+          "cacheRead": 5917696,
+          "cacheWrite": 0,
+          "tokens": 438842,
+          "tokensInclCache": 6356538
+        }
+      ]
+    },
+    {
+      "date": "2026-07-19",
+      "cost": 28.6849,
+      "input": 1872586,
+      "output": 119474,
+      "reasoning": 42020,
+      "cacheRead": 44911616,
+      "cacheWrite": 0,
+      "tokens": 2034080,
+      "tokensInclCache": 46945696,
+      "conversations": 1,
+      "turns": 4,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol",
+          "cost": 28.6849,
+          "input": 1872586,
+          "output": 119474,
+          "reasoning": 42020,
+          "cacheRead": 44911616,
+          "cacheWrite": 0,
+          "tokens": 2034080,
+          "tokensInclCache": 46945696
+        }
+      ]
+    },
+    {
+      "date": "2026-07-20",
+      "cost": 1.2219,
+      "input": 272973,
+      "output": 7766,
+      "reasoning": 3951,
+      "cacheRead": 1495168,
+      "cacheWrite": 0,
+      "tokens": 284690,
+      "tokensInclCache": 1779858,
+      "conversations": 2,
+      "turns": 23,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.5",
+          "cost": 0.6859,
+          "input": 75433,
+          "output": 2953,
+          "reasoning": 1106,
+          "cacheRead": 373888,
+          "cacheWrite": 0,
+          "tokens": 79492,
+          "tokensInclCache": 453380
+        },
+        {
+          "source": "codex",
+          "model": "gpt-5.6-terra",
+          "cost": 0.536,
+          "input": 129300,
+          "output": 4535,
+          "reasoning": 2377,
+          "cacheRead": 972288,
+          "cacheWrite": 0,
+          "tokens": 136212,
+          "tokensInclCache": 1108500
+        },
+        {
+          "source": "codex",
+          "model": "codex-auto-review",
+          "cost": 0,
+          "input": 68240,
+          "output": 278,
+          "reasoning": 468,
+          "cacheRead": 148992,
+          "cacheWrite": 0,
+          "tokens": 68986,
+          "tokensInclCache": 217978
+        }
+      ]
+    },
+    {
+      "date": "2026-07-22",
+      "cost": 3.9867,
+      "input": 341956,
+      "output": 27034,
+      "reasoning": 9174,
+      "cacheRead": 4736768,
+      "cacheWrite": 0,
+      "tokens": 378164,
+      "tokensInclCache": 5114932,
+      "conversations": 1,
+      "turns": 6,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol",
+          "cost": 3.9867,
+          "input": 341956,
+          "output": 27034,
+          "reasoning": 9174,
+          "cacheRead": 4736768,
+          "cacheWrite": 0,
+          "tokens": 378164,
+          "tokensInclCache": 5114932
+        }
+      ]
+    },
+    {
+      "date": "2026-07-24",
+      "cost": 1.5028,
+      "input": 179326,
+      "output": 5617,
+      "reasoning": 9460,
+      "cacheRead": 1209856,
+      "cacheWrite": 0,
+      "tokens": 194403,
+      "tokensInclCache": 1404259,
+      "conversations": 2,
+      "turns": 3,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol",
+          "cost": 1.5028,
+          "input": 179326,
+          "output": 5617,
+          "reasoning": 9460,
+          "cacheRead": 1209856,
+          "cacheWrite": 0,
+          "tokens": 194403,
+          "tokensInclCache": 1404259
+        }
+      ]
+    },
+    {
+      "date": "2026-07-28",
+      "cost": 3.1203,
+      "input": 265003,
+      "output": 12583,
+      "reasoning": 17227,
+      "cacheRead": 3660288,
+      "cacheWrite": 0,
+      "tokens": 294813,
+      "tokensInclCache": 3955101,
+      "conversations": 1,
+      "turns": 56,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol",
+          "cost": 3.1203,
+          "input": 265003,
+          "output": 12583,
+          "reasoning": 17227,
+          "cacheRead": 3660288,
+          "cacheWrite": 0,
+          "tokens": 294813,
+          "tokensInclCache": 3955101
+        }
+      ]
+    },
+    {
+      "date": "2026-07-29",
+      "cost": 19.9814,
+      "input": 1111610,
+      "output": 118127,
+      "reasoning": 77578,
+      "cacheRead": 29052160,
+      "cacheWrite": 0,
+      "tokens": 1307315,
+      "tokensInclCache": 30359475,
+      "conversations": 1,
+      "turns": 2,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol",
+          "cost": 19.9814,
+          "input": 1111610,
+          "output": 118127,
+          "reasoning": 77578,
+          "cacheRead": 29052160,
+          "cacheWrite": 0,
+          "tokens": 1307315,
+          "tokensInclCache": 30359475
+        }
+      ]
+    },
+    {
+      "date": "2026-07-30",
+      "cost": 79.0107,
+      "input": 4368269,
+      "output": 338270,
+      "reasoning": 218732,
+      "cacheRead": 125993984,
+      "cacheWrite": 0,
+      "tokens": 4925271,
+      "tokensInclCache": 130919255,
+      "conversations": 3,
+      "turns": 217,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol",
+          "cost": 79.0107,
+          "input": 4368269,
+          "output": 338270,
+          "reasoning": 218732,
+          "cacheRead": 125993984,
+          "cacheWrite": 0,
+          "tokens": 4925271,
+          "tokensInclCache": 130919255
+        }
+      ]
+    },
+    {
+      "date": "2026-07-31",
+      "cost": 285.6711,
+      "input": 15969100,
+      "output": 955418,
+      "reasoning": 690556,
+      "cacheRead": 472188160,
+      "cacheWrite": 0,
+      "tokens": 17615074,
+      "tokensInclCache": 489803234,
+      "conversations": 26,
+      "turns": 57,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol",
+          "cost": 285.6711,
+          "input": 15969100,
+          "output": 955418,
+          "reasoning": 690556,
+          "cacheRead": 472188160,
+          "cacheWrite": 0,
+          "tokens": 17615074,
+          "tokensInclCache": 489803234
+        }
+      ]
+    },
+    {
+      "date": "2026-08-01",
+      "cost": 205.3259,
+      "input": 20019431,
+      "output": 461043,
+      "reasoning": 374675,
+      "cacheRead": 271334656,
+      "cacheWrite": 0,
+      "tokens": 20855149,
+      "tokensInclCache": 292189805,
+      "conversations": 18,
+      "turns": 44,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol",
+          "cost": 205.3259,
+          "input": 20019431,
+          "output": 461043,
+          "reasoning": 374675,
+          "cacheRead": 271334656,
+          "cacheWrite": 0,
+          "tokens": 20855149,
+          "tokensInclCache": 292189805
+        }
+      ]
+    },
+    {
+      "date": "2026-08-02",
+      "cost": 127.9673,
+      "input": 15467547,
+      "output": 219518,
+      "reasoning": 177210,
+      "cacheRead": 145406464,
+      "cacheWrite": 0,
+      "tokens": 15864275,
+      "tokensInclCache": 161270739,
+      "conversations": 18,
+      "turns": 48,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol",
+          "cost": 127.9673,
+          "input": 15467547,
+          "output": 219518,
+          "reasoning": 177210,
+          "cacheRead": 145406464,
+          "cacheWrite": 0,
+          "tokens": 15864275,
+          "tokensInclCache": 161270739
+        }
+      ]
+    },
+    {
+      "date": "2026-08-03",
+      "cost": 18.2449,
+      "input": 1881802,
+      "output": 26560,
+      "reasoning": 19938,
+      "cacheRead": 24469248,
+      "cacheWrite": 0,
+      "tokens": 1928300,
+      "tokensInclCache": 26397548,
+      "conversations": 0,
+      "turns": 0,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol",
+          "cost": 18.2449,
+          "input": 1881802,
+          "output": 26560,
+          "reasoning": 19938,
+          "cacheRead": 24469248,
+          "cacheWrite": 0,
+          "tokens": 1928300,
+          "tokensInclCache": 26397548
+        }
+      ]
+    },
+    {
+      "date": "2026-08-07",
+      "cost": 74.3287,
+      "input": 3022206,
+      "output": 204154,
+      "reasoning": 118055,
+      "cacheRead": 139489280,
+      "cacheWrite": 0,
+      "tokens": 3344415,
+      "tokensInclCache": 142833695,
+      "conversations": 0,
+      "turns": 0,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol",
+          "cost": 74.3287,
+          "input": 3022206,
+          "output": 204154,
+          "reasoning": 118055,
+          "cacheRead": 139489280,
+          "cacheWrite": 0,
+          "tokens": 3344415,
+          "tokensInclCache": 142833695
+        }
+      ]
+    },
+    {
+      "date": "2026-08-08",
+      "cost": 95.6027,
+      "input": 4337406,
+      "output": 334976,
+      "reasoning": 208738,
+      "cacheRead": 168447104,
+      "cacheWrite": 0,
+      "tokens": 4881120,
+      "tokensInclCache": 173328224,
+      "conversations": 3,
+      "turns": 27,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol",
+          "cost": 95.6027,
+          "input": 4337406,
+          "output": 334976,
+          "reasoning": 208738,
+          "cacheRead": 168447104,
+          "cacheWrite": 0,
+          "tokens": 4881120,
+          "tokensInclCache": 173328224
+        }
+      ]
+    },
+    {
+      "date": "2026-08-09",
+      "cost": 37.3537,
+      "input": 2005090,
+      "output": 101830,
+      "reasoning": 73016,
+      "cacheRead": 64590976,
+      "cacheWrite": 0,
+      "tokens": 2179936,
+      "tokensInclCache": 66770912,
+      "conversations": 0,
+      "turns": 0,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol",
+          "cost": 37.3537,
+          "input": 2005090,
+          "output": 101830,
+          "reasoning": 73016,
+          "cacheRead": 64590976,
+          "cacheWrite": 0,
+          "tokens": 2179936,
+          "tokensInclCache": 66770912
+        }
+      ]
+    },
+    {
+      "date": "2026-08-10",
+      "cost": 41.7821,
+      "input": 2302204,
+      "output": 163750,
+      "reasoning": 99539,
+      "cacheRead": 68268800,
+      "cacheWrite": 0,
+      "tokens": 2565493,
+      "tokensInclCache": 70834293,
+      "conversations": 2,
+      "turns": 10,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol",
+          "cost": 41.7821,
+          "input": 2302204,
+          "output": 163750,
+          "reasoning": 99539,
+          "cacheRead": 68268800,
+          "cacheWrite": 0,
+          "tokens": 2565493,
+          "tokensInclCache": 70834293
+        }
+      ]
+    },
+    {
+      "date": "2026-08-11",
+      "cost": 2.8741,
+      "input": 193555,
+      "output": 13568,
+      "reasoning": 17112,
+      "cacheRead": 3715584,
+      "cacheWrite": 0,
+      "tokens": 224235,
+      "tokensInclCache": 3939819,
+      "conversations": 1,
+      "turns": 2,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol",
+          "cost": 2.8741,
+          "input": 193555,
+          "output": 13568,
+          "reasoning": 17112,
+          "cacheRead": 3715584,
+          "cacheWrite": 0,
+          "tokens": 224235,
+          "tokensInclCache": 3939819
+        }
+      ]
+    },
+    {
+      "date": "2026-08-12",
+      "cost": 2.3013,
+      "input": 111849,
+      "output": 16297,
+      "reasoning": 12605,
+      "cacheRead": 3189632,
+      "cacheWrite": 0,
+      "tokens": 140751,
+      "tokensInclCache": 3330383,
+      "conversations": 1,
+      "turns": 2,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol",
+          "cost": 2.3013,
+          "input": 111849,
+          "output": 16297,
+          "reasoning": 12605,
+          "cacheRead": 3189632,
+          "cacheWrite": 0,
+          "tokens": 140751,
+          "tokensInclCache": 3330383
+        }
+      ]
+    },
+    {
+      "date": "2026-08-13",
+      "cost": 4.7705,
+      "input": 313453,
+      "output": 14830,
+      "reasoning": 19210,
+      "cacheRead": 7171584,
+      "cacheWrite": 0,
+      "tokens": 347493,
+      "tokensInclCache": 7519077,
+      "conversations": 2,
+      "turns": 11,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol",
+          "cost": 4.7705,
+          "input": 306379,
+          "output": 14775,
+          "reasoning": 19142,
+          "cacheRead": 7166720,
+          "cacheWrite": 0,
+          "tokens": 340296,
+          "tokensInclCache": 7507016
+        },
+        {
+          "source": "codex",
+          "model": "codex-auto-review",
+          "cost": 0,
+          "input": 7074,
+          "output": 55,
+          "reasoning": 68,
+          "cacheRead": 4864,
+          "cacheWrite": 0,
+          "tokens": 7197,
+          "tokensInclCache": 12061
+        }
+      ]
+    },
+    {
+      "date": "2026-08-14",
+      "cost": 2.5002,
+      "input": 161457,
+      "output": 16263,
+      "reasoning": 21475,
+      "cacheRead": 2748928,
+      "cacheWrite": 0,
+      "tokens": 199195,
+      "tokensInclCache": 2948123,
+      "conversations": 1,
+      "turns": 10,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol",
+          "cost": 2.5002,
+          "input": 161457,
+          "output": 16263,
+          "reasoning": 21475,
+          "cacheRead": 2748928,
+          "cacheWrite": 0,
+          "tokens": 199195,
+          "tokensInclCache": 2948123
+        }
+      ]
+    },
+    {
+      "date": "2026-08-15",
+      "cost": 0.0619,
+      "input": 405,
+      "output": 258,
+      "reasoning": 879,
+      "cacheRead": 93952,
+      "cacheWrite": 0,
+      "tokens": 1542,
+      "tokensInclCache": 95494,
+      "conversations": 0,
+      "turns": 0,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol",
+          "cost": 0.0619,
+          "input": 405,
+          "output": 258,
+          "reasoning": 879,
+          "cacheRead": 93952,
+          "cacheWrite": 0,
+          "tokens": 1542,
+          "tokensInclCache": 95494
+        }
+      ]
+    },
+    {
+      "date": "2026-08-16",
+      "cost": 9.1564,
+      "input": 457508,
+      "output": 33276,
+      "reasoning": 33602,
+      "cacheRead": 14972032,
+      "cacheWrite": 0,
+      "tokens": 524386,
+      "tokensInclCache": 15496418,
+      "conversations": 1,
+      "turns": 9,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol",
+          "cost": 9.1564,
+          "input": 457508,
+          "output": 33276,
+          "reasoning": 33602,
+          "cacheRead": 14972032,
+          "cacheWrite": 0,
+          "tokens": 524386,
+          "tokensInclCache": 15496418
+        }
+      ]
+    },
+    {
+      "date": "2026-08-21",
+      "cost": 2.3461,
+      "input": 136376,
+      "output": 14014,
+      "reasoning": 6567,
+      "cacheRead": 3472384,
+      "cacheWrite": 0,
+      "tokens": 156957,
+      "tokensInclCache": 3629341,
+      "conversations": 1,
+      "turns": 7,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol",
+          "cost": 2.3461,
+          "input": 136376,
+          "output": 14014,
+          "reasoning": 6567,
+          "cacheRead": 3472384,
+          "cacheWrite": 0,
+          "tokens": 156957,
+          "tokensInclCache": 3629341
+        }
+      ]
+    },
+    {
+      "date": "2026-08-22",
+      "cost": 43.0398,
+      "input": 2239585,
+      "output": 247875,
+      "reasoning": 108488,
+      "cacheRead": 67385600,
+      "cacheWrite": 0,
+      "tokens": 2595948,
+      "tokensInclCache": 69981548,
+      "conversations": 15,
+      "turns": 41,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol",
+          "cost": 43.0398,
+          "input": 2239585,
+          "output": 247875,
+          "reasoning": 108488,
+          "cacheRead": 67385600,
+          "cacheWrite": 0,
+          "tokens": 2595948,
+          "tokensInclCache": 69981548
+        }
+      ]
+    },
+    {
+      "date": "2026-08-24",
+      "cost": 5.5562,
+      "input": 259338,
+      "output": 14344,
+      "reasoning": 20601,
+      "cacheRead": 9549824,
+      "cacheWrite": 0,
+      "tokens": 294283,
+      "tokensInclCache": 9844107,
+      "conversations": 1,
+      "turns": 4,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol",
+          "cost": 5.5562,
+          "input": 259338,
+          "output": 14344,
+          "reasoning": 20601,
+          "cacheRead": 9549824,
+          "cacheWrite": 0,
+          "tokens": 294283,
+          "tokensInclCache": 9844107
+        }
+      ]
+    },
+    {
+      "date": "2026-08-25",
+      "cost": 2.5224,
+      "input": 509987,
+      "output": 48882,
+      "reasoning": 1671,
+      "cacheRead": 3743808,
+      "cacheWrite": 0,
+      "tokens": 560540,
+      "tokensInclCache": 4304348,
+      "conversations": 1,
+      "turns": 188,
+      "rows": [
+        {
+          "source": "claude-code",
+          "model": "glm-5.3",
+          "cost": 1.5868,
+          "input": 286953,
+          "output": 48517,
+          "reasoning": 0,
+          "cacheRead": 3736896,
+          "cacheWrite": 0,
+          "tokens": 335470,
+          "tokensInclCache": 4072366
+        },
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol",
+          "cost": 0.9356,
+          "input": 223034,
+          "output": 365,
+          "reasoning": 1671,
+          "cacheRead": 6912,
+          "cacheWrite": 0,
+          "tokens": 225070,
+          "tokensInclCache": 231982
+        }
+      ]
+    },
+    {
+      "date": "2026-08-26",
+      "cost": 3.1006,
+      "input": 406836,
+      "output": 23501,
+      "reasoning": 12239,
+      "cacheRead": 4945856,
+      "cacheWrite": 0,
+      "tokens": 442576,
+      "tokensInclCache": 5388432,
+      "conversations": 1,
+      "turns": 9,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol",
+          "cost": 1.949,
+          "input": 158224,
+          "output": 12865,
+          "reasoning": 12239,
+          "cacheRead": 2034944,
+          "cacheWrite": 0,
+          "tokens": 183328,
+          "tokensInclCache": 2218272
+        },
+        {
+          "source": "claude-code",
+          "model": "glm-5.3",
+          "cost": 1.1517,
+          "input": 248612,
+          "output": 10636,
+          "reasoning": 0,
+          "cacheRead": 2910912,
+          "cacheWrite": 0,
+          "tokens": 259248,
+          "tokensInclCache": 3170160
+        }
+      ]
+    },
+    {
+      "date": "2026-08-27",
+      "cost": 27.2706,
+      "input": 1387517,
+      "output": 150517,
+      "reasoning": 63462,
+      "cacheRead": 43602432,
+      "cacheWrite": 0,
+      "tokens": 1601496,
+      "tokensInclCache": 45203928,
+      "conversations": 2,
+      "turns": 40,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol",
+          "cost": 27.2706,
+          "input": 1387517,
+          "output": 150517,
+          "reasoning": 63462,
+          "cacheRead": 43602432,
+          "cacheWrite": 0,
+          "tokens": 1601496,
+          "tokensInclCache": 45203928
+        }
+      ]
+    },
+    {
+      "date": "2026-08-28",
+      "cost": 29.0474,
+      "input": 1689435,
+      "output": 111983,
+      "reasoning": 52647,
+      "cacheRead": 53996864,
+      "cacheWrite": 0,
+      "tokens": 1854065,
+      "tokensInclCache": 55850929,
+      "conversations": 1,
+      "turns": 9,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol",
+          "cost": 26.2552,
+          "input": 1343100,
+          "output": 77299,
+          "reasoning": 52647,
+          "cacheRead": 45709824,
+          "cacheWrite": 0,
+          "tokens": 1473046,
+          "tokensInclCache": 47182870
+        },
+        {
+          "source": "claude-code",
+          "model": "glm-5.3",
+          "cost": 2.7921,
+          "input": 346335,
+          "output": 34684,
+          "reasoning": 0,
+          "cacheRead": 8287040,
+          "cacheWrite": 0,
+          "tokens": 381019,
+          "tokensInclCache": 8668059
+        }
+      ]
+    },
+    {
+      "date": "2026-08-29",
+      "cost": 10.0786,
+      "input": 723415,
+      "output": 42358,
+      "reasoning": 31340,
+      "cacheRead": 14277504,
+      "cacheWrite": 0,
+      "tokens": 797113,
+      "tokensInclCache": 15074617,
+      "conversations": 2,
+      "turns": 9,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol",
+          "cost": 10.0786,
+          "input": 723415,
+          "output": 42358,
+          "reasoning": 31340,
+          "cacheRead": 14277504,
+          "cacheWrite": 0,
+          "tokens": 797113,
+          "tokensInclCache": 15074617
+        }
+      ]
+    },
+    {
+      "date": "2026-08-31",
+      "cost": 59.9584,
+      "input": 2048868,
+      "output": 129904,
+      "reasoning": 110951,
+      "cacheRead": 48559488,
+      "cacheWrite": 0,
+      "tokens": 2289723,
+      "tokensInclCache": 50849211,
+      "conversations": 15,
+      "turns": 53,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol-priority",
+          "cost": 55.1609,
+          "input": 1744390,
+          "output": 110715,
+          "reasoning": 99543,
+          "cacheRead": 40994304,
+          "cacheWrite": 0,
+          "tokens": 1954648,
+          "tokensInclCache": 42948952
+        },
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol",
+          "cost": 4.7597,
+          "input": 298658,
+          "output": 17121,
+          "reasoning": 11408,
+          "cacheRead": 7486336,
+          "cacheWrite": 0,
+          "tokens": 327187,
+          "tokensInclCache": 7813523
+        },
+        {
+          "source": "claude-code",
+          "model": "glm-5.3",
+          "cost": 0.0377,
+          "input": 5820,
+          "output": 2068,
+          "reasoning": 0,
+          "cacheRead": 78848,
+          "cacheWrite": 0,
+          "tokens": 7888,
+          "tokensInclCache": 86736
+        }
+      ]
+    },
+    {
+      "date": "2026-09-01",
+      "cost": 56.271,
+      "input": 1368537,
+      "output": 81191,
+      "reasoning": 73558,
+      "cacheRead": 48915968,
+      "cacheWrite": 0,
+      "tokens": 1523286,
+      "tokensInclCache": 50439254,
+      "conversations": 3,
+      "turns": 6,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol-priority",
+          "cost": 56.271,
+          "input": 1368537,
+          "output": 81191,
+          "reasoning": 73558,
+          "cacheRead": 48915968,
+          "cacheWrite": 0,
+          "tokens": 1523286,
+          "tokensInclCache": 50439254
+        }
+      ]
+    },
+    {
+      "date": "2026-09-03",
+      "cost": 0.6613,
+      "input": 49942,
+      "output": 1841,
+      "reasoning": 2610,
+      "cacheRead": 463360,
+      "cacheWrite": 0,
+      "tokens": 54393,
+      "tokensInclCache": 517753,
+      "conversations": 2,
+      "turns": 5,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol-priority",
+          "cost": 0.3743,
+          "input": 10816,
+          "output": 820,
+          "reasoning": 1303,
+          "cacheRead": 253568,
+          "cacheWrite": 0,
+          "tokens": 12939,
+          "tokensInclCache": 266507
+        },
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol",
+          "cost": 0.2433,
+          "input": 28278,
+          "output": 1007,
+          "reasoning": 1307,
+          "cacheRead": 209792,
+          "cacheWrite": 0,
+          "tokens": 30592,
+          "tokensInclCache": 240384
+        },
+        {
+          "source": "opencode",
+          "model": "gpt-5.6-sol",
+          "cost": 0.0437,
+          "input": 10848,
+          "output": 14,
+          "reasoning": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "tokens": 10862,
+          "tokensInclCache": 10862
+        }
+      ]
+    },
+    {
+      "date": "2026-09-04",
+      "cost": 6.3023,
+      "input": 230971,
+      "output": 84740,
+      "reasoning": 12330,
+      "cacheRead": 10299136,
+      "cacheWrite": 0,
+      "tokens": 328041,
+      "tokensInclCache": 10627177,
+      "conversations": 2,
+      "turns": 241,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol-priority",
+          "cost": 6.2317,
+          "input": 174646,
+          "output": 7302,
+          "reasoning": 12330,
+          "cacheRead": 5061504,
+          "cacheWrite": 0,
+          "tokens": 194278,
+          "tokensInclCache": 5255782
+        },
+        {
+          "source": "claude-code",
+          "model": "deepseek-v4-flash",
+          "cost": 0.0706,
+          "input": 56325,
+          "output": 77438,
+          "reasoning": 0,
+          "cacheRead": 5237632,
+          "cacheWrite": 0,
+          "tokens": 133763,
+          "tokensInclCache": 5371395
+        }
+      ]
+    },
+    {
+      "date": "2026-09-05",
+      "cost": 512.6996,
+      "input": 7203588,
+      "output": 894719,
+      "reasoning": 488469,
+      "cacheRead": 272538240,
+      "cacheWrite": 0,
+      "tokens": 8586776,
+      "tokensInclCache": 281125016,
+      "conversations": 5,
+      "turns": 130,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-6-astra-priority",
+          "cost": 325.665,
+          "input": 2827008,
+          "output": 333114,
+          "reasoning": 179336,
+          "cacheRead": 108939904,
+          "cacheWrite": 0,
+          "tokens": 3339458,
+          "tokensInclCache": 112279362
+        },
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol-priority",
+          "cost": 128.1069,
+          "input": 2373277,
+          "output": 282894,
+          "reasoning": 240649,
+          "cacheRead": 110223744,
+          "cacheWrite": 0,
+          "tokens": 2896820,
+          "tokensInclCache": 113120564
+        },
+        {
+          "source": "codex",
+          "model": "gpt-6-astra",
+          "cost": 51.3573,
+          "input": 1314750,
+          "output": 103328,
+          "reasoning": 41244,
+          "cacheRead": 30981248,
+          "cacheWrite": 0,
+          "tokens": 1459322,
+          "tokensInclCache": 32440570
+        },
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol",
+          "cost": 7.4339,
+          "input": 595613,
+          "output": 35761,
+          "reasoning": 27240,
+          "cacheRead": 9478656,
+          "cacheWrite": 0,
+          "tokens": 658614,
+          "tokensInclCache": 10137270
+        },
+        {
+          "source": "claude-code",
+          "model": "deepseek-v4-flash",
+          "cost": 0.1365,
+          "input": 92940,
+          "output": 139622,
+          "reasoning": 0,
+          "cacheRead": 12914688,
+          "cacheWrite": 0,
+          "tokens": 232562,
+          "tokensInclCache": 13147250
+        }
+      ]
+    },
+    {
+      "date": "2026-09-06",
+      "cost": 47.7868,
+      "input": 806,
+      "output": 396193,
+      "reasoning": 0,
+      "cacheRead": 83511306,
+      "cacheWrite": 1263179,
+      "tokens": 1660178,
+      "tokensInclCache": 85171484,
+      "conversations": 3,
+      "turns": 436,
+      "rows": [
+        {
+          "source": "claude-code",
+          "model": "claude-opus-5",
+          "cost": 36.7804,
+          "input": 320,
+          "output": 209338,
+          "reasoning": 0,
+          "cacheRead": 45918494,
+          "cacheWrite": 858612,
+          "tokens": 1068270,
+          "tokensInclCache": 46986764
+        },
+        {
+          "source": "claude-code",
+          "model": "claude-sonnet-5",
+          "cost": 11.0064,
+          "input": 486,
+          "output": 186855,
+          "reasoning": 0,
+          "cacheRead": 37592812,
+          "cacheWrite": 404567,
+          "tokens": 591908,
+          "tokensInclCache": 38184720
+        }
+      ]
+    },
+    {
+      "date": "2026-09-08",
+      "cost": 81.4226,
+      "input": 1968825,
+      "output": 229796,
+      "reasoning": 64153,
+      "cacheRead": 47036928,
+      "cacheWrite": 0,
+      "tokens": 2262774,
+      "tokensInclCache": 49299702,
+      "conversations": 6,
+      "turns": 20,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-6-astra",
+          "cost": 81.4226,
+          "input": 1968825,
+          "output": 229796,
+          "reasoning": 64153,
+          "cacheRead": 47036928,
+          "cacheWrite": 0,
+          "tokens": 2262774,
+          "tokensInclCache": 49299702
+        }
+      ]
+    },
+    {
+      "date": "2026-09-10",
+      "cost": 17.4378,
+      "input": 2755971,
+      "output": 1338673,
+      "reasoning": 6934,
+      "cacheRead": 133094656,
+      "cacheWrite": 0,
+      "tokens": 4101578,
+      "tokensInclCache": 137196234,
+      "conversations": 23,
+      "turns": 2781,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-6-astra",
+          "cost": 15.9413,
+          "input": 439564,
+          "output": 44122,
+          "reasoning": 6934,
+          "cacheRead": 8992896,
+          "cacheWrite": 0,
+          "tokens": 490620,
+          "tokensInclCache": 9483516
+        },
+        {
+          "source": "claude-code",
+          "model": "deepseek-v4.1-flash-expires-on-0910",
+          "cost": 1.4965,
+          "input": 2316407,
+          "output": 1294551,
+          "reasoning": 0,
+          "cacheRead": 124101760,
+          "cacheWrite": 0,
+          "tokens": 3610958,
+          "tokensInclCache": 127712718
+        }
+      ]
+    },
+    {
+      "date": "2026-09-11",
+      "cost": 0.9686,
+      "input": 344362,
+      "output": 591097,
+      "reasoning": 0,
+      "cacheRead": 187426432,
+      "cacheWrite": 0,
+      "tokens": 935459,
+      "tokensInclCache": 188361891,
+      "conversations": 2,
+      "turns": 286,
+      "rows": [
+        {
+          "source": "claude-code",
+          "model": "deepseek-v4.1-flash-expires-on-0910",
+          "cost": 0.9686,
+          "input": 344362,
+          "output": 591097,
+          "reasoning": 0,
+          "cacheRead": 187426432,
+          "cacheWrite": 0,
+          "tokens": 935459,
+          "tokensInclCache": 188361891
+        }
+      ]
+    },
+    {
+      "date": "2026-09-12",
+      "cost": 45.3525,
+      "input": 632281,
+      "output": 47512,
+      "reasoning": 18842,
+      "cacheRead": 35712000,
+      "cacheWrite": 0,
+      "tokens": 698635,
+      "tokensInclCache": 36410635,
+      "conversations": 1,
+      "turns": 20,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-6-astra",
+          "cost": 45.3525,
+          "input": 632281,
+          "output": 47512,
+          "reasoning": 18842,
+          "cacheRead": 35712000,
+          "cacheWrite": 0,
+          "tokens": 698635,
+          "tokensInclCache": 36410635
+        }
+      ]
+    },
+    {
+      "date": "2026-09-13",
+      "cost": 742.3928,
+      "input": 10029447,
+      "output": 1387695,
+      "reasoning": 656463,
+      "cacheRead": 425818880,
+      "cacheWrite": 0,
+      "tokens": 12073605,
+      "tokensInclCache": 437892485,
+      "conversations": 6,
+      "turns": 192,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-6-astra",
+          "cost": 514.2497,
+          "input": 8467434,
+          "output": 1146073,
+          "reasoning": 532823,
+          "cacheRead": 345630592,
+          "cacheWrite": 0,
+          "tokens": 10146330,
+          "tokensInclCache": 355776922
+        },
+        {
+          "source": "codex",
+          "model": "gpt-6-astra-priority",
+          "cost": 228.143,
+          "input": 1562013,
+          "output": 241622,
+          "reasoning": 123640,
+          "cacheRead": 80188288,
+          "cacheWrite": 0,
+          "tokens": 1927275,
+          "tokensInclCache": 82115563
+        }
+      ]
+    },
+    {
+      "date": "2026-09-14",
+      "cost": 251.8488,
+      "input": 3510698,
+      "output": 318868,
+      "reasoning": 218060,
+      "cacheRead": 135174400,
+      "cacheWrite": 0,
+      "tokens": 4047626,
+      "tokensInclCache": 139222026,
+      "conversations": 2,
+      "turns": 13,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-6-astra",
+          "cost": 142.4067,
+          "input": 2624792,
+          "output": 218170,
+          "reasoning": 125934,
+          "cacheRead": 98953600,
+          "cacheWrite": 0,
+          "tokens": 2968896,
+          "tokensInclCache": 101922496
+        },
+        {
+          "source": "codex",
+          "model": "gpt-6-astra-priority",
+          "cost": 109.4421,
+          "input": 885906,
+          "output": 100698,
+          "reasoning": 92126,
+          "cacheRead": 36220800,
+          "cacheWrite": 0,
+          "tokens": 1078730,
+          "tokensInclCache": 37299530
+        }
+      ]
+    },
+    {
+      "date": "2026-09-15",
+      "cost": 162.0871,
+      "input": 2982015,
+      "output": 225992,
+      "reasoning": 159768,
+      "cacheRead": 112978944,
+      "cacheWrite": 0,
+      "tokens": 3367775,
+      "tokensInclCache": 116346719,
+      "conversations": 0,
+      "turns": 0,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-6-astra",
+          "cost": 162.0871,
+          "input": 2982015,
+          "output": 225992,
+          "reasoning": 159768,
+          "cacheRead": 112978944,
+          "cacheWrite": 0,
+          "tokens": 3367775,
+          "tokensInclCache": 116346719
+        }
+      ]
+    },
+    {
+      "date": "2026-09-16",
+      "cost": 155.9104,
+      "input": 2828911,
+      "output": 260788,
+      "reasoning": 165645,
+      "cacheRead": 106299648,
+      "cacheWrite": 0,
+      "tokens": 3255344,
+      "tokensInclCache": 109554992,
+      "conversations": 2,
+      "turns": 12,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-6-astra",
+          "cost": 155.9104,
+          "input": 2828911,
+          "output": 260788,
+          "reasoning": 165645,
+          "cacheRead": 106299648,
+          "cacheWrite": 0,
+          "tokens": 3255344,
+          "tokensInclCache": 109554992
+        }
+      ]
+    },
+    {
+      "date": "2026-09-17",
+      "cost": 4.2705,
+      "input": 272429,
+      "output": 183904,
+      "reasoning": 5922,
+      "cacheRead": 16002816,
+      "cacheWrite": 0,
+      "tokens": 462255,
+      "tokensInclCache": 16465071,
+      "conversations": 4,
+      "turns": 125,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-6-astra",
+          "cost": 4.0055,
+          "input": 165433,
+          "output": 10372,
+          "reasoning": 5922,
+          "cacheRead": 1536512,
+          "cacheWrite": 0,
+          "tokens": 181727,
+          "tokensInclCache": 1718239
+        },
+        {
+          "source": "claude-code",
+          "model": "deepseek-v4.1-flash-expires-on-0910",
+          "cost": 0.2649,
+          "input": 106996,
+          "output": 173532,
+          "reasoning": 0,
+          "cacheRead": 14466304,
+          "cacheWrite": 0,
+          "tokens": 280528,
+          "tokensInclCache": 14746832
+        }
+      ]
+    },
+    {
+      "date": "2026-09-18",
+      "cost": 0,
+      "input": 0,
+      "output": 0,
+      "reasoning": 0,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "tokens": 0,
+      "tokensInclCache": 0,
+      "conversations": 1,
+      "turns": 1,
+      "rows": []
+    },
+    {
+      "date": "2026-09-19",
+      "cost": 868.9904,
+      "input": 12857637,
+      "output": 3449722,
+      "reasoning": 479349,
+      "cacheRead": 983348224,
+      "cacheWrite": 0,
+      "tokens": 16786708,
+      "tokensInclCache": 1000134932,
+      "conversations": 16,
+      "turns": 3176,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-6-astra-priority",
+          "cost": 708.3646,
+          "input": 7131005,
+          "output": 750967,
+          "reasoning": 328525,
+          "cacheRead": 228897664,
+          "cacheWrite": 0,
+          "tokens": 8210497,
+          "tokensInclCache": 237108161
+        },
+        {
+          "source": "codex",
+          "model": "gpt-6-astra",
+          "cost": 156.8689,
+          "input": 3330588,
+          "output": 304642,
+          "reasoning": 150824,
+          "cacheRead": 100789760,
+          "cacheWrite": 0,
+          "tokens": 3786054,
+          "tokensInclCache": 104575814
+        },
+        {
+          "source": "claude-code",
+          "model": "deepseek-v4.1-flash-expires-on-0910",
+          "cost": 3.7569,
+          "input": 2396044,
+          "output": 2394113,
+          "reasoning": 0,
+          "cacheRead": 653660800,
+          "cacheWrite": 0,
+          "tokens": 4790157,
+          "tokensInclCache": 658450957
+        }
+      ]
+    },
+    {
+      "date": "2026-09-20",
+      "cost": 54.262,
+      "input": 1296286,
+      "output": 1080874,
+      "reasoning": 0,
+      "cacheRead": 299049895,
+      "cacheWrite": 478389,
+      "tokens": 2855549,
+      "tokensInclCache": 301905444,
+      "conversations": 4,
+      "turns": 868,
+      "rows": [
+        {
+          "source": "claude-code",
+          "model": "claude-opus-5",
+          "cost": 52.938,
+          "input": 532,
+          "output": 282570,
+          "reasoning": 0,
+          "cacheRead": 82174375,
+          "cacheWrite": 478389,
+          "tokens": 761491,
+          "tokensInclCache": 82935866
+        },
+        {
+          "source": "claude-code",
+          "model": "deepseek-v4.1-flash-expires-on-0910",
+          "cost": 1.324,
+          "input": 1295754,
+          "output": 798304,
+          "reasoning": 0,
+          "cacheRead": 216875520,
+          "cacheWrite": 0,
+          "tokens": 2094058,
+          "tokensInclCache": 218969578
+        }
+      ]
+    },
+    {
+      "date": "2026-09-21",
+      "cost": 110.7188,
+      "input": 4438803,
+      "output": 3564280,
+      "reasoning": 8245,
+      "cacheRead": 1234220063,
+      "cacheWrite": 1221167,
+      "tokens": 9232495,
+      "tokensInclCache": 1243452558,
+      "conversations": 57,
+      "turns": 4506,
+      "rows": [
+        {
+          "source": "claude-code",
+          "model": "claude-opus-5",
+          "cost": 84.7104,
+          "input": 586,
+          "output": 312420,
+          "reasoning": 0,
+          "cacheRead": 129370527,
+          "cacheWrite": 1221167,
+          "tokens": 1534173,
+          "tokensInclCache": 130904700
+        },
+        {
+          "source": "codex",
+          "model": "gpt-6-astra",
+          "cost": 18.9219,
+          "input": 741626,
+          "output": 36670,
+          "reasoning": 8245,
+          "cacheRead": 9259904,
+          "cacheWrite": 0,
+          "tokens": 786541,
+          "tokensInclCache": 10046445
+        },
+        {
+          "source": "claude-code",
+          "model": "deepseek-flash",
+          "cost": 7.0044,
+          "input": 3554019,
+          "output": 3179135,
+          "reasoning": 0,
+          "cacheRead": 1094545792,
+          "cacheWrite": 0,
+          "tokens": 6733154,
+          "tokensInclCache": 1101278946
+        },
+        {
+          "source": "claude-code",
+          "model": "deepseek-v4-flash",
+          "cost": 0.0821,
+          "input": 142572,
+          "output": 36055,
+          "reasoning": 0,
+          "cacheRead": 1043840,
+          "cacheWrite": 0,
+          "tokens": 178627,
+          "tokensInclCache": 1222467
+        }
+      ]
+    },
+    {
+      "date": "2026-09-22",
+      "cost": 206.872,
+      "input": 6961651,
+      "output": 2175101,
+      "reasoning": 863654,
+      "cacheRead": 745981225,
+      "cacheWrite": 3290148,
+      "tokens": 13290554,
+      "tokensInclCache": 759271779,
+      "conversations": 33,
+      "turns": 2067,
+      "rows": [
+        {
+          "source": "claude-code",
+          "model": "claude-opus-5",
+          "cost": 199.65,
+          "input": 1298,
+          "output": 909565,
+          "reasoning": 0,
+          "cacheRead": 288005737,
+          "cacheWrite": 3290148,
+          "tokens": 4201011,
+          "tokensInclCache": 292206748
+        },
+        {
+          "source": "claude-code",
+          "model": "deepseek-flash",
+          "cost": 2.5471,
+          "input": 818389,
+          "output": 919897,
+          "reasoning": 0,
+          "cacheRead": 407534976,
+          "cacheWrite": 0,
+          "tokens": 1738286,
+          "tokensInclCache": 409273262
+        },
+        {
+          "source": "codex",
+          "model": "gpt-6-astra",
+          "cost": 2.4544,
+          "input": 137364,
+          "output": 8552,
+          "reasoning": 2598,
+          "cacheRead": 523264,
+          "cacheWrite": 0,
+          "tokens": 148514,
+          "tokensInclCache": 671778
+        },
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol",
+          "cost": 2.2206,
+          "input": 157074,
+          "output": 8125,
+          "reasoning": 9255,
+          "cacheRead": 3111680,
+          "cacheWrite": 0,
+          "tokens": 174454,
+          "tokensInclCache": 3286134
+        },
+        {
+          "source": "opencode",
+          "model": "mimo-v2.6-flash-free",
+          "cost": 0,
+          "input": 5833239,
+          "output": 328951,
+          "reasoning": 851772,
+          "cacheRead": 46804544,
+          "cacheWrite": 0,
+          "tokens": 7013962,
+          "tokensInclCache": 53818506
+        },
+        {
+          "source": "opencode",
+          "model": "mimo-v2.5-free",
+          "cost": 0,
+          "input": 14287,
+          "output": 11,
+          "reasoning": 29,
+          "cacheRead": 1024,
+          "cacheWrite": 0,
+          "tokens": 14327,
+          "tokensInclCache": 15351
+        }
+      ]
+    },
+    {
+      "date": "2026-09-23",
+      "cost": 113.5321,
+      "input": 10380003,
+      "output": 1358316,
+      "reasoning": 617547,
+      "cacheRead": 247912438,
+      "cacheWrite": 2333642,
+      "tokens": 14689508,
+      "tokensInclCache": 262601946,
+      "conversations": 20,
+      "turns": 1161,
+      "rows": [
+        {
+          "source": "claude-code",
+          "model": "claude-opus-5",
+          "cost": 111.832,
+          "input": 814,
+          "output": 485628,
+          "reasoning": 0,
+          "cacheRead": 154661219,
+          "cacheWrite": 2235658,
+          "tokens": 2722100,
+          "tokensInclCache": 157383319
+        },
+        {
+          "source": "claude-code",
+          "model": "claude-opus-5-5",
+          "cost": 1.1623,
+          "input": 46,
+          "output": 8655,
+          "reasoning": 0,
+          "cacheRead": 1025817,
+          "cacheWrite": 97984,
+          "tokens": 106685,
+          "tokensInclCache": 1132502
+        },
+        {
+          "source": "claude-code",
+          "model": "deepseek-flash",
+          "cost": 0.5378,
+          "input": 183480,
+          "output": 189996,
+          "reasoning": 0,
+          "cacheRead": 42467072,
+          "cacheWrite": 0,
+          "tokens": 373476,
+          "tokensInclCache": 42840548
+        },
+        {
+          "source": "opencode",
+          "model": "mimo-v2.6-flash-free",
+          "cost": 0,
+          "input": 10117663,
+          "output": 665118,
+          "reasoning": 614695,
+          "cacheRead": 48225408,
+          "cacheWrite": 0,
+          "tokens": 11397476,
+          "tokensInclCache": 59622884
+        },
+        {
+          "source": "opencode",
+          "model": "muse-spark-1.3-contributor-free",
+          "cost": 0,
+          "input": 78000,
+          "output": 8919,
+          "reasoning": 2852,
+          "cacheRead": 1532922,
+          "cacheWrite": 0,
+          "tokens": 89771,
+          "tokensInclCache": 1622693
+        }
+      ]
+    },
+    {
+      "date": "2026-09-24",
+      "cost": 251.2063,
+      "input": 8432311,
+      "output": 1817235,
+      "reasoning": 613770,
+      "cacheRead": 414259826,
+      "cacheWrite": 5073019,
+      "tokens": 15936335,
+      "tokensInclCache": 430196161,
+      "conversations": 44,
+      "turns": 859,
+      "rows": [
+        {
+          "source": "claude-code",
+          "model": "claude-opus-5",
+          "cost": 169.4858,
+          "input": 1148,
+          "output": 743723,
+          "reasoning": 0,
+          "cacheRead": 223681401,
+          "cacheWrite": 4042457,
+          "tokens": 4787328,
+          "tokensInclCache": 228468729
+        },
+        {
+          "source": "codex",
+          "model": "gpt-6-astra",
+          "cost": 37.145,
+          "input": 798572,
+          "output": 67145,
+          "reasoning": 38519,
+          "cacheRead": 23876096,
+          "cacheWrite": 0,
+          "tokens": 904236,
+          "tokensInclCache": 24780332
+        },
+        {
+          "source": "claude-code",
+          "model": "claude-opus-5-5",
+          "cost": 29.2476,
+          "input": 918,
+          "output": 323572,
+          "reasoning": 0,
+          "cacheRead": 73274428,
+          "cacheWrite": 1014704,
+          "tokens": 1339194,
+          "tokensInclCache": 74613622
+        },
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol",
+          "cost": 15.2735,
+          "input": 593523,
+          "output": 68187,
+          "reasoning": 33681,
+          "cacheRead": 27155072,
+          "cacheWrite": 0,
+          "tokens": 695391,
+          "tokensInclCache": 27850463
+        },
+        {
+          "source": "claude-code",
+          "model": "claude-sonnet-5",
+          "cost": 0.0544,
+          "input": 4,
+          "output": 1274,
+          "reasoning": 0,
+          "cacheRead": 9862,
+          "cacheWrite": 15858,
+          "tokens": 17136,
+          "tokensInclCache": 26998
+        },
+        {
+          "source": "opencode",
+          "model": "mimo-v2.6-flash-free",
+          "cost": 0,
+          "input": 4550800,
+          "output": 454908,
+          "reasoning": 377639,
+          "cacheRead": 31315520,
+          "cacheWrite": 0,
+          "tokens": 5383347,
+          "tokensInclCache": 36698867
+        },
+        {
+          "source": "opencode",
+          "model": "muse-spark-1.3-contributor-free",
+          "cost": 0,
+          "input": 2081033,
+          "output": 143308,
+          "reasoning": 150719,
+          "cacheRead": 31299991,
+          "cacheWrite": 0,
+          "tokens": 2375060,
+          "tokensInclCache": 33675051
+        },
+        {
+          "source": "opencode",
+          "model": "ling-3.0-flash-fin-free",
+          "cost": 0,
+          "input": 136899,
+          "output": 11444,
+          "reasoning": 6339,
+          "cacheRead": 2044736,
+          "cacheWrite": 0,
+          "tokens": 154682,
+          "tokensInclCache": 2199418
+        },
+        {
+          "source": "opencode",
+          "model": "nemotron-3-ultra-free",
+          "cost": 0,
+          "input": 269414,
+          "output": 3674,
+          "reasoning": 6873,
+          "cacheRead": 1602720,
+          "cacheWrite": 0,
+          "tokens": 279961,
+          "tokensInclCache": 1882681
+        }
+      ]
+    },
+    {
+      "date": "2026-09-25",
+      "cost": 195.4569,
+      "input": 2938055,
+      "output": 1928013,
+      "reasoning": 44299,
+      "cacheRead": 506562362,
+      "cacheWrite": 4675107,
+      "tokens": 9585474,
+      "tokensInclCache": 516147836,
+      "conversations": 23,
+      "turns": 1846,
+      "rows": [
+        {
+          "source": "claude-code",
+          "model": "claude-opus-5",
+          "cost": 129.894,
+          "input": 1196,
+          "output": 663891,
+          "reasoning": 0,
+          "cacheRead": 183176630,
+          "cacheWrite": 2170245,
+          "tokens": 2835332,
+          "tokensInclCache": 186011962
+        },
+        {
+          "source": "claude-code",
+          "model": "claude-opus-5-5",
+          "cost": 62.2328,
+          "input": 1282,
+          "output": 711471,
+          "reasoning": 0,
+          "cacheRead": 148246960,
+          "cacheWrite": 2504862,
+          "tokens": 3217615,
+          "tokensInclCache": 151464575
+        },
+        {
+          "source": "codex",
+          "model": "gpt-5.6-sol",
+          "cost": 2.1736,
+          "input": 403413,
+          "output": 3214,
+          "reasoning": 2997,
+          "cacheRead": 1089408,
+          "cacheWrite": 0,
+          "tokens": 409624,
+          "tokensInclCache": 1499032
+        },
+        {
+          "source": "claude-code",
+          "model": "deepseek-flash",
+          "cost": 1.1564,
+          "input": 539345,
+          "output": 497014,
+          "reasoning": 0,
+          "cacheRead": 165727744,
+          "cacheWrite": 0,
+          "tokens": 1036359,
+          "tokensInclCache": 166764103
+        },
+        {
+          "source": "opencode",
+          "model": "nemotron-3-ultra-free",
+          "cost": 0,
+          "input": 1530987,
+          "output": 31857,
+          "reasoning": 21015,
+          "cacheRead": 7525440,
+          "cacheWrite": 0,
+          "tokens": 1583859,
+          "tokensInclCache": 9109299
+        },
+        {
+          "source": "opencode",
+          "model": "muse-spark-1.3-contributor-free",
+          "cost": 0,
+          "input": 340585,
+          "output": 13498,
+          "reasoning": 18727,
+          "cacheRead": 747348,
+          "cacheWrite": 0,
+          "tokens": 372810,
+          "tokensInclCache": 1120158
+        },
+        {
+          "source": "opencode",
+          "model": "mimo-v2.6-flash-free",
+          "cost": 0,
+          "input": 121247,
+          "output": 7068,
+          "reasoning": 1560,
+          "cacheRead": 48832,
+          "cacheWrite": 0,
+          "tokens": 129875,
+          "tokensInclCache": 178707
+        }
+      ]
+    },
+    {
+      "date": "2026-09-26",
+      "cost": 129.1047,
+      "input": 565682,
+      "output": 641961,
+      "reasoning": 111147,
+      "cacheRead": 195887177,
+      "cacheWrite": 4408225,
+      "tokens": 5727015,
+      "tokensInclCache": 201614192,
+      "conversations": 6,
+      "turns": 292,
+      "rows": [
+        {
+          "source": "claude-code",
+          "model": "claude-opus-5",
+          "cost": 106.1212,
+          "input": 678,
+          "output": 392761,
+          "reasoning": 0,
+          "cacheRead": 126111679,
+          "cacheWrite": 3341720,
+          "tokens": 3735159,
+          "tokensInclCache": 129846838
+        },
+        {
+          "source": "claude-code",
+          "model": "claude-opus-5-5",
+          "cost": 22.1264,
+          "input": 434,
+          "output": 162637,
+          "reasoning": 0,
+          "cacheRead": 55880048,
+          "cacheWrite": 961984,
+          "tokens": 1125055,
+          "tokensInclCache": 57005103
+        },
+        {
+          "source": "claude-code",
+          "model": "claude-sonnet-5",
+          "cost": 0.8571,
+          "input": 50,
+          "output": 23495,
+          "reasoning": 0,
+          "cacheRead": 1803520,
+          "cacheWrite": 104521,
+          "tokens": 128066,
+          "tokensInclCache": 1931586
+        },
+        {
+          "source": "opencode",
+          "model": "mimo-v2.6-flash-free",
+          "cost": 0,
+          "input": 383198,
+          "output": 25375,
+          "reasoning": 85813,
+          "cacheRead": 8232704,
+          "cacheWrite": 0,
+          "tokens": 494386,
+          "tokensInclCache": 8727090
+        },
+        {
+          "source": "opencode",
+          "model": "space-bunny-free",
+          "cost": 0,
+          "input": 181322,
+          "output": 37693,
+          "reasoning": 25334,
+          "cacheRead": 3859226,
+          "cacheWrite": 0,
+          "tokens": 244349,
+          "tokensInclCache": 4103575
+        }
+      ]
+    }
+  ]
+}

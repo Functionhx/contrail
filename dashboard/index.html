@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contrail · AI 编程用量</title>
+    <meta name="description" content="Claude Code、Codex、OpenCode 的每日 token 用量与估算花费。只公开聚合数字，不含项目、路径或对话内容。" />
+    <meta name="referrer" content="no-referrer" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+    <script src="./boot.js"></script>
+    <style>
+      /* 在主样式加载前定底色，避免深色模式闪白 */
+      html { background: #fafafa; }
+      html.dark { background: #0a0a0a; }
+      .noscript { max-width: 42rem; margin: 3rem auto; padding: 0 1.5rem; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.6; color: #111; }
+    </style>
+  </head>
+  <body>
+    <noscript>
+      <main class="noscript">
+        <h1>Contrail · AI 编程用量</h1>
+        <p>这个页面需要 JavaScript 来绘制图表。原始数据是公开的 JSON，可以直接查看：
+          <a href="./data/hosts.json">data/hosts.json</a>（机器列表），以及其中每台机器的 <code>data/&lt;机器名&gt;.json</code>。</p>
+        <p>数据只含每日的 token 数、估算花费、工具名与模型名；不含项目名、文件路径或任何对话内容。</p>
+      </main>
+    </noscript>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

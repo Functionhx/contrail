@@ -1,0 +1,15 @@
+[Unit]
+Description=Contrail：每天发布一次 AI 用量
+
+[Timer]
+# 本地 13:00。服务器时区是 America/Los_Angeles：夏令时对应北京时间 04:00，
+# 冬令时 05:00。漂移无害——「该报哪一天」由发布逻辑按 UTC 自己算，而且每次都
+# 整份重写全部日期，错过几天补跑也不会漏。
+OnCalendar=*-*-* 13:00:00
+
+# 服务器常关机：开机后补跑错过的那次（cron 做不到）。
+Persistent=true
+AccuracySec=1min
+
+[Install]
+WantedBy=timers.target

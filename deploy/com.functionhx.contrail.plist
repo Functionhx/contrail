@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Mac：由 deploy/install-macos.sh 生成并安装到 ~/Library/LaunchAgents/，
+  __REPO__ 与 __HOME__ 会被替换成实际路径。
+  StartCalendarInterval 在 Mac 睡眠时错过的那次会在唤醒后补跑。
+-->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.functionhx.contrail</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>__REPO__/deploy/publish.sh</string>
+  </array>
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key>
+    <integer>13</integer>
+    <key>Minute</key>
+    <integer>0</integer>
+  </dict>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>PATH</key>
+    <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
+  </dict>
+  <key>LowPriorityIO</key>
+  <true/>
+  <key>Nice</key>
+  <integer>10</integer>
+  <key>StandardOutPath</key>
+  <string>__HOME__/.contrail/publish.log</string>
+  <key>StandardErrorPath</key>
+  <string>__HOME__/.contrail/publish.log</string>
+</dict>
+</plist>

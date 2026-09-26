@@ -202,3 +202,40 @@ test('writeIfChanged：内容相同则不写，mtime 不动', () => {
 test('保留期默认值是个有限天数', () => {
   assert.ok(Number.isFinite(RETENTION_DAYS) && RETENTION_DAYS > 0 && RETENTION_DAYS <= 3650);
 });
+
+// ── 与上一次发布合并（只增不减）─────────────────────────────────────────────
+import { mergeWithPrevious } from '../src/publish.js';
+
+const dayOf = (date, input) => bucket({ bucketStart: `${date}T04:00:00.000Z`, inputTokens: input });
+
+test('合并：日志里已消失的日子保留上次发布的值', () => {
+  const prev = buildPayload([dayOf('2026-09-20', 100), dayOf('2026-09-21', 200)], prices, { host: 'h', now: NOW });
+  const next = buildPayload([dayOf('2026-09-21', 200)], prices, { host: 'h', now: NOW });
+  const merged = mergeWithPrevious(prev, next, { now: NOW });
+  assert.deepEqual(merged.days.map((d) => d.date), ['2026-09-20', '2026-09-21']);
+  assert.equal(merged.totals.tokens, 300);
+});
+
+test('合并：某天变小（日志被部分清理）保留旧的整天记录；变大用新值', () => {
+  const prev = buildPayload([dayOf('2026-09-20', 500), dayOf('2026-09-21', 100)], prices, { host: 'h', now: NOW });
+  const next = buildPayload([dayOf('2026-09-20', 300), dayOf('2026-09-21', 900)], prices, { host: 'h', now: NOW });
+  const merged = mergeWithPrevious(prev, next, { now: NOW });
+  assert.deepEqual(merged.days.map((d) => d.input), [500, 900]);
+  assert.equal(merged.totals.input, 1400);
+});
+
+test('合并：没有上次的文件、版本或主机不符时原样返回', () => {
+  const next = buildPayload([dayOf('2026-09-21', 1)], prices, { host: 'h', now: NOW });
+  assert.equal(mergeWithPrevious(null, next), next);
+  assert.equal(mergeWithPrevious({ ...next, schemaVersion: 1 }, next), next);
+  assert.equal(mergeWithPrevious({ ...next, host: 'other' }, next), next);
+});
+
+test('合并后的结构仍满足白名单与汇总恒等式', () => {
+  const prev = buildPayload([dayOf('2026-09-20', 100)], prices, { host: 'h', now: NOW });
+  const next = buildPayload([dayOf('2026-09-21', 200)], prices, { host: 'h', now: NOW });
+  const m = mergeWithPrevious(prev, next, { now: NOW });
+  assert.equal(m.totals.tokensInclCache, m.totals.tokens + m.totals.cacheRead);
+  assert.equal(m.totals.days, m.days.length);
+  assert.equal(m.totals.firstDate, '2026-09-20');
+});

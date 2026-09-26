@@ -1,0 +1,66 @@
+name: 构建并发布站点
+
+# 任何一台机器推送了新数据，或者页面代码有变化，都重新构建并发布。
+# 站点地址：https://functionhx.github.io/contrail/
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # 两道硬闸门：隐私守卫与采集层测试。不过就不发布。
+      - name: 校验数据（schema + 隐私守卫）
+        run: python3 scripts/validate_usage.py
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: dashboard/package-lock.json
+
+      - name: 采集层测试
+        run: npm test
+
+      # --ignore-scripts：不执行任何依赖包的安装脚本。lockfile 固定了版本与哈希。
+      - name: 安装页面依赖
+        working-directory: dashboard
+        run: npm ci --ignore-scripts --no-audit --no-fund
+
+      - name: 准备站点数据
+        run: node scripts/prepare-site-data.mjs
+
+      - name: 构建页面
+        working-directory: dashboard
+        run: npm run build
+
+      - name: 检查产物不引用第三方资源
+        run: node scripts/check-dist.mjs
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dashboard/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

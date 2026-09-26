@@ -1,27 +1,6 @@
 MIT License
 
-Copyright (c) 2026 Contrail and vibe-local contributors
-
----
-
-This project contains code derived from `@vibe-cafe/vibe-usage`
-(https://github.com/vibe-cafe/vibe-usage), which declares the MIT License
-in its `package.json`.
-
-The upstream project ships no standalone LICENSE file and its source files
-carry no copyright headers, so no named copyright holder is available to
-reproduce here. Attribution is given to the upstream project and its
-maintainers as listed on npm (`kalasoo`, `glowin`).
-
-The extracted files, the modifications made to them, and the reasons for each
-modification are documented in `src/upstream/UPSTREAM.md`.
-
-The web dashboard under `dashboard/` is derived from TokenTracker
-(https://github.com/xiufengsun/TokenTracker), Copyright (c) 2026 xiufengsun,
-licensed under the MIT License. Its original license text is kept in
-`dashboard/LICENSE.tokentracker`.
-
----
+Copyright (c) 2026 xiufengsun
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
