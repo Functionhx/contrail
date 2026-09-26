@@ -115,7 +115,7 @@ export function useUsageData({
   }, [storageKey]);
 
   const isLocalMode = typeof window !== "undefined" &&
-    (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1");
+    /* Contrail：数据是同源静态文件，任何域名下都按本地模式加载 */ true;
 
   const beginRequest = useLatestRequestGuard([
     baseUrl,
@@ -344,9 +344,9 @@ export function useUsageData({
       return;
     }
     const isLocalMode = typeof window !== "undefined" &&
-      (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1");
+      /* Contrail：数据是同源静态文件，任何域名下都按本地模式加载 */ true;
     const isLocalModeCheck = typeof window !== "undefined" &&
-      (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1");
+      /* Contrail：数据是同源静态文件，任何域名下都按本地模式加载 */ true;
     if (!tokenReady && !guestAllowed && !mockEnabled && !isLocalModeCheck && !useCloud) {
       setDaily([]);
       setSummary(null);

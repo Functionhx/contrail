@@ -46,7 +46,7 @@ export function useActivityHeatmap({
   const cacheAllowed = !guestAllowed;
 
   const isLocalMode = typeof window !== "undefined" &&
-    (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1");
+    /* Contrail：数据是同源静态文件，任何域名下都按本地模式加载 */ true;
 
   // A manual refresh, visibility refresh, and a scope/range change can all
   // overlap.  Heatmap responses are often considerably slower than the other

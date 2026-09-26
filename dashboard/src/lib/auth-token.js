@@ -104,7 +104,7 @@ export async function resolveAuthAccessTokenWithRetry(auth, options = {}) {
 export function isAccessTokenReady(token) {
   // 本地开发模式不需要真实 token
   if (typeof window !== "undefined" &&
-      (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1")) {
+      /* Contrail：数据是同源静态文件，任何域名下都按本地模式加载 */ true) {
     return true;
   }
   if (typeof token === "function") return true;
