@@ -1,0 +1,262 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://functionhx.github.io/contrail/data/usage.schema.json",
+  "title": "Contrail daily usage aggregate (v2)",
+  "description": "每台机器由 contrail publish 产出。只含聚合数字、工具名与模型名。刻意不包含项目名、文件路径、会话 id 或任何对话内容——不是过滤掉的，而是数据结构里根本没有这些字段。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "host",
+    "schemaVersion",
+    "updatedAt",
+    "timezone",
+    "totals",
+    "unpricedModels",
+    "days"
+  ],
+  "properties": {
+    "host": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64,
+      "pattern": "^[A-Za-z0-9._-]+$",
+      "description": "必须与文件名 <host>.json 一致。"
+    },
+    "schemaVersion": {
+      "const": 2
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "UTC 时刻（带 Z）。"
+    },
+    "timezone": {
+      "const": "UTC+8"
+    },
+    "totals": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "cost",
+        "input",
+        "output",
+        "reasoning",
+        "cacheRead",
+        "cacheWrite",
+        "tokens",
+        "tokensInclCache",
+        "conversations",
+        "turns",
+        "days"
+      ],
+      "properties": {
+        "cost": {
+          "type": "number",
+          "minimum": 0
+        },
+        "input": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "output": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "reasoning": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "cacheRead": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "cacheWrite": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "tokens": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "input + output + reasoning + cacheWrite，不含 cacheRead。与上游 bucket 的 totalTokens 口径一致。"
+        },
+        "tokensInclCache": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "实际处理量 = tokens + cacheRead。"
+        },
+        "conversations": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "turns": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "days": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "firstDate": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "lastDate": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        }
+      }
+    },
+    "unpricedModels": {
+      "type": "array",
+      "maxItems": 200,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 100
+      },
+      "description": "按 $0 计的模型。页面据此标注「花费是下界」。"
+    },
+    "days": {
+      "type": "array",
+      "maxItems": 400,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "date",
+          "cost",
+          "input",
+          "output",
+          "reasoning",
+          "cacheRead",
+          "cacheWrite",
+          "tokens",
+          "tokensInclCache",
+          "conversations",
+          "turns",
+          "rows"
+        ],
+        "properties": {
+          "date": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+            "description": "UTC+8 日历日，日界落在 UTC 16:00。"
+          },
+          "cost": {
+            "type": "number",
+            "minimum": 0,
+            "description": "估算花费（美元）。无价格的模型按 $0 计，所以是下界。"
+          },
+          "input": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "output": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "reasoning": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "cacheRead": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "cacheWrite": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "tokens": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "input + output + reasoning + cacheWrite，不含 cacheRead。与上游 bucket 的 totalTokens 口径一致。"
+          },
+          "tokensInclCache": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "实际处理量 = tokens + cacheRead。"
+          },
+          "conversations": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "当日开始的会话数。只是计数。"
+          },
+          "turns": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "当日开始的会话里用户的提问轮数。只是计数。"
+          },
+          "rows": {
+            "type": "array",
+            "maxItems": 500,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "source",
+                "model",
+                "cost",
+                "input",
+                "output",
+                "reasoning",
+                "cacheRead",
+                "cacheWrite",
+                "tokens",
+                "tokensInclCache"
+              ],
+              "properties": {
+                "source": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9-]{1,40}$",
+                  "description": "工具的注册键，如 claude-code / codex。"
+                },
+                "model": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 100
+                },
+                "cost": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "input": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "output": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "reasoning": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "cacheRead": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "cacheWrite": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "tokens": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "description": "input + output + reasoning + cacheWrite，不含 cacheRead。与上游 bucket 的 totalTokens 口径一致。"
+                },
+                "tokensInclCache": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "description": "实际处理量 = tokens + cacheRead。"
+                }
+              }
+            },
+            "description": "按 (工具, 模型) 拆分。"
+          }
+        }
+      },
+      "description": "按日期严格升序。"
+    }
+  }
+}
