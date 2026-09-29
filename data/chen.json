@@ -1,22 +1,22 @@
 {
   "host": "chen",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-28T20:00:36Z",
+  "updatedAt": "2026-09-29T20:00:37Z",
   "timezone": "UTC+8",
   "totals": {
-    "cost": 21058.7667,
-    "input": 860723219,
-    "output": 74337836,
+    "cost": 21058.9082,
+    "input": 860857396,
+    "output": 74490979,
     "reasoning": 49234044,
-    "cacheRead": 32098793539,
+    "cacheRead": 32108638019,
     "cacheWrite": 15703070,
-    "tokens": 999998169,
-    "tokensInclCache": 33098791708,
-    "conversations": 2547,
-    "turns": 18401,
-    "days": 94,
+    "tokens": 1000285489,
+    "tokensInclCache": 33108923508,
+    "conversations": 2548,
+    "turns": 18541,
+    "days": 96,
     "firstDate": "2026-03-03",
-    "lastDate": "2026-09-18"
+    "lastDate": "2026-09-30"
   },
   "unpricedModels": [
     "GLM-5.3",
@@ -3136,6 +3136,60 @@
           "cacheWrite": 0,
           "tokens": 98339,
           "tokensInclCache": 3025571
+        }
+      ]
+    },
+    {
+      "date": "2026-09-29",
+      "cost": 0.1143,
+      "input": 123543,
+      "output": 123531,
+      "reasoning": 0,
+      "cacheRead": 7230976,
+      "cacheWrite": 0,
+      "tokens": 247074,
+      "tokensInclCache": 7478050,
+      "conversations": 1,
+      "turns": 140,
+      "rows": [
+        {
+          "source": "claude-code",
+          "model": "deepseek-v4.1-flash-expires-on-0910",
+          "cost": 0.1143,
+          "input": 123543,
+          "output": 123531,
+          "reasoning": 0,
+          "cacheRead": 7230976,
+          "cacheWrite": 0,
+          "tokens": 247074,
+          "tokensInclCache": 7478050
+        }
+      ]
+    },
+    {
+      "date": "2026-09-30",
+      "cost": 0.0272,
+      "input": 10634,
+      "output": 29612,
+      "reasoning": 0,
+      "cacheRead": 2613504,
+      "cacheWrite": 0,
+      "tokens": 40246,
+      "tokensInclCache": 2653750,
+      "conversations": 0,
+      "turns": 0,
+      "rows": [
+        {
+          "source": "claude-code",
+          "model": "deepseek-v4.1-flash-expires-on-0910",
+          "cost": 0.0272,
+          "input": 10634,
+          "output": 29612,
+          "reasoning": 0,
+          "cacheRead": 2613504,
+          "cacheWrite": 0,
+          "tokens": 40246,
+          "tokensInclCache": 2653750
         }
       ]
     }
