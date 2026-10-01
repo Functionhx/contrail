@@ -1,22 +1,22 @@
 {
   "host": "chen",
   "schemaVersion": 2,
-  "updatedAt": "2026-09-30T20:00:38Z",
+  "updatedAt": "2026-10-01T20:00:37Z",
   "timezone": "UTC+8",
   "totals": {
-    "cost": 21058.9082,
-    "input": 860857396,
-    "output": 74490979,
+    "cost": 21058.9171,
+    "input": 860900030,
+    "output": 74494132,
     "reasoning": 49234044,
-    "cacheRead": 32108638019,
+    "cacheRead": 32108849859,
     "cacheWrite": 15703070,
-    "tokens": 1000285489,
-    "tokensInclCache": 33108923508,
-    "conversations": 2548,
-    "turns": 18541,
-    "days": 96,
+    "tokens": 1000331276,
+    "tokensInclCache": 33109181135,
+    "conversations": 2549,
+    "turns": 18548,
+    "days": 97,
     "firstDate": "2026-03-03",
-    "lastDate": "2026-09-30"
+    "lastDate": "2026-10-01"
   },
   "unpricedModels": [
     "GLM-5.3",
@@ -3190,6 +3190,33 @@
           "cacheWrite": 0,
           "tokens": 40246,
           "tokensInclCache": 2653750
+        }
+      ]
+    },
+    {
+      "date": "2026-10-01",
+      "cost": 0.0089,
+      "input": 42634,
+      "output": 3153,
+      "reasoning": 0,
+      "cacheRead": 211840,
+      "cacheWrite": 0,
+      "tokens": 45787,
+      "tokensInclCache": 257627,
+      "conversations": 1,
+      "turns": 7,
+      "rows": [
+        {
+          "source": "claude-code",
+          "model": "deepseek-v4.1-flash-expires-on-0910",
+          "cost": 0.0089,
+          "input": 42634,
+          "output": 3153,
+          "reasoning": 0,
+          "cacheRead": 211840,
+          "cacheWrite": 0,
+          "tokens": 45787,
+          "tokensInclCache": 257627
         }
       ]
     }
