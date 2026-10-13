@@ -1,22 +1,22 @@
 {
   "host": "machen-3",
   "schemaVersion": 2,
-  "updatedAt": "2026-10-09T20:00:12Z",
+  "updatedAt": "2026-10-13T06:49:33Z",
   "timezone": "UTC+8",
   "totals": {
-    "cost": 6940.0973,
-    "input": 249183997,
-    "output": 36243081,
-    "reasoning": 10909220,
-    "cacheRead": 10991409563,
-    "cacheWrite": 38754682,
-    "tokens": 335090980,
-    "tokensInclCache": 11326500543,
-    "conversations": 522,
-    "turns": 25631,
-    "days": 93,
+    "cost": 7027.8332,
+    "input": 253574301,
+    "output": 37101145,
+    "reasoning": 11001154,
+    "cacheRead": 11356762578,
+    "cacheWrite": 40529287,
+    "tokens": 342205887,
+    "tokensInclCache": 11698968465,
+    "conversations": 530,
+    "turns": 26760,
+    "days": 96,
     "firstDate": "2026-02-28",
-    "lastDate": "2026-10-10"
+    "lastDate": "2026-10-13"
   },
   "unpricedModels": [
     "claude-sonnet-5-5",
@@ -3205,7 +3205,7 @@
       "tokens": 5059286,
       "tokensInclCache": 254568150,
       "conversations": 5,
-      "turns": 339,
+      "turns": 342,
       "rows": [
         {
           "source": "claude-code",
@@ -3463,7 +3463,7 @@
       "tokens": 2802937,
       "tokensInclCache": 141632541,
       "conversations": 2,
-      "turns": 10,
+      "turns": 18,
       "rows": [
         {
           "source": "claude-code",
@@ -3493,28 +3493,157 @@
     },
     {
       "date": "2026-10-10",
-      "cost": 7.3587,
-      "input": 152,
-      "output": 77214,
-      "reasoning": 0,
-      "cacheRead": 21682133,
-      "cacheWrite": 184678,
-      "tokens": 262044,
-      "tokensInclCache": 21944177,
-      "conversations": 1,
-      "turns": 2,
+      "cost": 24.9967,
+      "input": 2950140,
+      "output": 400177,
+      "reasoning": 74785,
+      "cacheRead": 113517554,
+      "cacheWrite": 621885,
+      "tokens": 4046987,
+      "tokensInclCache": 117564541,
+      "conversations": 5,
+      "turns": 711,
       "rows": [
         {
           "source": "claude-code",
           "model": "claude-opus-5-5",
-          "cost": 7.3587,
-          "input": 152,
-          "output": 77214,
+          "cost": 24.9967,
+          "input": 674,
+          "output": 272596,
           "reasoning": 0,
-          "cacheRead": 21682133,
-          "cacheWrite": 184678,
-          "tokens": 262044,
-          "tokensInclCache": 21944177
+          "cacheRead": 73758066,
+          "cacheWrite": 621885,
+          "tokens": 895155,
+          "tokensInclCache": 74653221
+        },
+        {
+          "source": "codex",
+          "model": "gpt-6.1-sol",
+          "cost": 0,
+          "input": 2949466,
+          "output": 127581,
+          "reasoning": 74785,
+          "cacheRead": 39759488,
+          "cacheWrite": 0,
+          "tokens": 3151832,
+          "tokensInclCache": 42911320
+        }
+      ]
+    },
+    {
+      "date": "2026-10-11",
+      "cost": 28.8505,
+      "input": 55859,
+      "output": 280599,
+      "reasoning": 815,
+      "cacheRead": 96235988,
+      "cacheWrite": 535657,
+      "tokens": 872930,
+      "tokensInclCache": 97108918,
+      "conversations": 2,
+      "turns": 390,
+      "rows": [
+        {
+          "source": "claude-code",
+          "model": "claude-opus-5-5",
+          "cost": 28.8505,
+          "input": 694,
+          "output": 276930,
+          "reasoning": 0,
+          "cacheRead": 95119572,
+          "cacheWrite": 535657,
+          "tokens": 813281,
+          "tokensInclCache": 95932853
+        },
+        {
+          "source": "codex",
+          "model": "gpt-6.1-sol",
+          "cost": 0,
+          "input": 55165,
+          "output": 3669,
+          "reasoning": 815,
+          "cacheRead": 1116416,
+          "cacheWrite": 0,
+          "tokens": 59649,
+          "tokensInclCache": 1176065
+        }
+      ]
+    },
+    {
+      "date": "2026-10-12",
+      "cost": 40.7627,
+      "input": 409660,
+      "output": 236005,
+      "reasoning": 7861,
+      "cacheRead": 159398676,
+      "cacheWrite": 758472,
+      "tokens": 1411998,
+      "tokensInclCache": 160810674,
+      "conversations": 0,
+      "turns": 0,
+      "rows": [
+        {
+          "source": "claude-code",
+          "model": "claude-opus-5-5",
+          "cost": 40.7627,
+          "input": 528,
+          "output": 220699,
+          "reasoning": 0,
+          "cacheRead": 151394324,
+          "cacheWrite": 758472,
+          "tokens": 979699,
+          "tokensInclCache": 152374023
+        },
+        {
+          "source": "codex",
+          "model": "gpt-6.1-sol",
+          "cost": 0,
+          "input": 409132,
+          "output": 15306,
+          "reasoning": 7861,
+          "cacheRead": 8004352,
+          "cacheWrite": 0,
+          "tokens": 432299,
+          "tokensInclCache": 8436651
+        }
+      ]
+    },
+    {
+      "date": "2026-10-13",
+      "cost": 0.4847,
+      "input": 974797,
+      "output": 18497,
+      "reasoning": 8473,
+      "cacheRead": 17882930,
+      "cacheWrite": 43269,
+      "tokens": 1045036,
+      "tokensInclCache": 18927966,
+      "conversations": 2,
+      "turns": 19,
+      "rows": [
+        {
+          "source": "claude-code",
+          "model": "claude-opus-5-5",
+          "cost": 0.4847,
+          "input": 18,
+          "output": 3031,
+          "reasoning": 0,
+          "cacheRead": 389426,
+          "cacheWrite": 43269,
+          "tokens": 46318,
+          "tokensInclCache": 435744
+        },
+        {
+          "source": "codex",
+          "model": "gpt-6.1-sol",
+          "cost": 0,
+          "input": 974779,
+          "output": 15466,
+          "reasoning": 8473,
+          "cacheRead": 17493504,
+          "cacheWrite": 0,
+          "tokens": 998718,
+          "tokensInclCache": 18492222
         }
       ]
     }
