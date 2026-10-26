@@ -1,22 +1,22 @@
 {
   "host": "chen",
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T20:00:09Z",
+  "updatedAt": "2026-10-26T20:00:09Z",
   "timezone": "UTC+8",
   "totals": {
     "cost": 21302.2924,
-    "input": 871438571,
-    "output": 76665546,
-    "reasoning": 50118886,
-    "cacheRead": 33065895590,
+    "input": 871504693,
+    "output": 76669297,
+    "reasoning": 50119134,
+    "cacheRead": 33066316838,
     "cacheWrite": 25851902,
-    "tokens": 1024074905,
-    "tokensInclCache": 34089970495,
-    "conversations": 2601,
-    "turns": 20979,
-    "days": 107,
+    "tokens": 1024145026,
+    "tokensInclCache": 34090461864,
+    "conversations": 2602,
+    "turns": 20985,
+    "days": 108,
     "firstDate": "2026-03-03",
-    "lastDate": "2026-10-25"
+    "lastDate": "2026-10-26"
   },
   "unpricedModels": [
     "GLM-5.3",
@@ -3573,6 +3573,33 @@
           "cacheWrite": 250671,
           "tokens": 279634,
           "tokensInclCache": 4573124
+        }
+      ]
+    },
+    {
+      "date": "2026-10-26",
+      "cost": 0,
+      "input": 66122,
+      "output": 3751,
+      "reasoning": 248,
+      "cacheRead": 421248,
+      "cacheWrite": 0,
+      "tokens": 70121,
+      "tokensInclCache": 491369,
+      "conversations": 1,
+      "turns": 6,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-6.1-sol",
+          "cost": 0,
+          "input": 66122,
+          "output": 3751,
+          "reasoning": 248,
+          "cacheRead": 421248,
+          "cacheWrite": 0,
+          "tokens": 70121,
+          "tokensInclCache": 491369
         }
       ]
     }
