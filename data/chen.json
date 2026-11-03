@@ -1,22 +1,22 @@
 {
   "host": "chen",
   "schemaVersion": 2,
-  "updatedAt": "2026-10-31T20:00:09Z",
+  "updatedAt": "2026-11-03T21:00:38Z",
   "timezone": "UTC+8",
   "totals": {
-    "cost": 21302.2924,
-    "input": 871504693,
-    "output": 76669297,
-    "reasoning": 50119134,
-    "cacheRead": 33066316838,
-    "cacheWrite": 25851902,
-    "tokens": 1024145026,
-    "tokensInclCache": 34090461864,
-    "conversations": 2602,
-    "turns": 20985,
-    "days": 108,
+    "cost": 21304.0188,
+    "input": 871987498,
+    "output": 76732400,
+    "reasoning": 50119291,
+    "cacheRead": 33073879888,
+    "cacheWrite": 25971889,
+    "tokens": 1024811078,
+    "tokensInclCache": 34098690966,
+    "conversations": 2608,
+    "turns": 21135,
+    "days": 110,
     "firstDate": "2026-03-03",
-    "lastDate": "2026-10-26"
+    "lastDate": "2026-11-03"
   },
   "unpricedModels": [
     "GLM-5.3",
@@ -3600,6 +3600,84 @@
           "cacheWrite": 0,
           "tokens": 70121,
           "tokensInclCache": 491369
+        }
+      ]
+    },
+    {
+      "date": "2026-11-02",
+      "cost": 0.3075,
+      "input": 20,
+      "output": 1786,
+      "reasoning": 0,
+      "cacheRead": 440955,
+      "cacheWrite": 22944,
+      "tokens": 24750,
+      "tokensInclCache": 465705,
+      "conversations": 1,
+      "turns": 10,
+      "rows": [
+        {
+          "source": "claude-code",
+          "model": "claude-opus-5-5",
+          "cost": 0.3075,
+          "input": 20,
+          "output": 1786,
+          "reasoning": 0,
+          "cacheRead": 440955,
+          "cacheWrite": 22944,
+          "tokens": 24750,
+          "tokensInclCache": 465705
+        }
+      ]
+    },
+    {
+      "date": "2026-11-03",
+      "cost": 1.4189,
+      "input": 482785,
+      "output": 61317,
+      "reasoning": 157,
+      "cacheRead": 7122095,
+      "cacheWrite": 97043,
+      "tokens": 641302,
+      "tokensInclCache": 7763397,
+      "conversations": 5,
+      "turns": 140,
+      "rows": [
+        {
+          "source": "claude-code",
+          "model": "claude-opus-5-5",
+          "cost": 1.2317,
+          "input": 30,
+          "output": 10088,
+          "reasoning": 0,
+          "cacheRead": 1267503,
+          "cacheWrite": 97043,
+          "tokens": 107161,
+          "tokensInclCache": 1374664
+        },
+        {
+          "source": "claude-code",
+          "model": "deepseek-flash",
+          "cost": 0.1872,
+          "input": 380515,
+          "output": 39952,
+          "reasoning": 0,
+          "cacheRead": 4184448,
+          "cacheWrite": 0,
+          "tokens": 420467,
+          "tokensInclCache": 4604915
+        },
+        {
+          "source": "codex",
+          "model": "gpt-6.1-sol",
+          "cost": 0,
+          "input": 102240,
+          "output": 11277,
+          "reasoning": 157,
+          "cacheRead": 1670144,
+          "cacheWrite": 0,
+          "tokens": 113674,
+          "tokensInclCache": 1783818
         }
       ]
     }
