@@ -1,29 +1,30 @@
 {
   "host": "machen-3",
   "schemaVersion": 2,
-  "updatedAt": "2026-11-05T21:00:06Z",
+  "updatedAt": "2026-11-06T21:00:07Z",
   "timezone": "UTC+8",
   "totals": {
-    "cost": 7461.7925,
-    "input": 260497600,
-    "output": 41318770,
-    "reasoning": 11341352,
-    "cacheRead": 12547594332,
+    "cost": 7462.1181,
+    "input": 261932404,
+    "output": 41533172,
+    "reasoning": 11345988,
+    "cacheRead": 12623575132,
     "cacheWrite": 57211628,
-    "tokens": 370369350,
-    "tokensInclCache": 12917963682,
-    "conversations": 602,
-    "turns": 30691,
-    "days": 118,
+    "tokens": 372023192,
+    "tokensInclCache": 12995598324,
+    "conversations": 610,
+    "turns": 30991,
+    "days": 119,
     "firstDate": "2026-02-28",
-    "lastDate": "2026-11-06"
+    "lastDate": "2026-11-07"
   },
   "unpricedModels": [
     "claude-sonnet-5-5",
     "gpt-5.3-codex-spark",
     "gpt-6-luna",
     "gpt-6.1-sol",
-    "gpt-6.1-sol-priority"
+    "gpt-6.1-sol-priority",
+    "gpt-6.1-terra-priority"
   ],
   "days": [
     {
@@ -4385,16 +4386,16 @@
     },
     {
       "date": "2026-11-06",
-      "cost": 5.0809,
-      "input": 422490,
-      "output": 139356,
-      "reasoning": 21272,
-      "cacheRead": 26299890,
+      "cost": 5.4065,
+      "input": 1540981,
+      "output": 342342,
+      "reasoning": 24528,
+      "cacheRead": 99473266,
       "cacheWrite": 192756,
-      "tokens": 775874,
-      "tokensInclCache": 27075764,
-      "conversations": 2,
-      "turns": 7,
+      "tokens": 2100607,
+      "tokensInclCache": 101573873,
+      "conversations": 9,
+      "turns": 305,
       "rows": [
         {
           "source": "claude-code",
@@ -4409,6 +4410,30 @@
           "tokensInclCache": 9572414
         },
         {
+          "source": "claude-code",
+          "model": "deepseek-flash",
+          "cost": 0.3256,
+          "input": 479599,
+          "output": 166988,
+          "reasoning": 0,
+          "cacheRead": 51154048,
+          "cacheWrite": 0,
+          "tokens": 646587,
+          "tokensInclCache": 51800635
+        },
+        {
+          "source": "codex",
+          "model": "gpt-6.1-terra-priority",
+          "cost": 0,
+          "input": 432599,
+          "output": 30499,
+          "reasoning": 2867,
+          "cacheRead": 18662528,
+          "cacheWrite": 0,
+          "tokens": 465965,
+          "tokensInclCache": 19128493
+        },
+        {
           "source": "codex",
           "model": "gpt-6.1-sol",
           "cost": 0,
@@ -4419,6 +4444,45 @@
           "cacheWrite": 0,
           "tokens": 499062,
           "tokensInclCache": 17503350
+        },
+        {
+          "source": "codex",
+          "model": "gpt-6.1-sol-priority",
+          "cost": 0,
+          "input": 206293,
+          "output": 5499,
+          "reasoning": 389,
+          "cacheRead": 3356800,
+          "cacheWrite": 0,
+          "tokens": 212181,
+          "tokensInclCache": 3568981
+        }
+      ]
+    },
+    {
+      "date": "2026-11-07",
+      "cost": 0,
+      "input": 316313,
+      "output": 11416,
+      "reasoning": 1380,
+      "cacheRead": 2807424,
+      "cacheWrite": 0,
+      "tokens": 329109,
+      "tokensInclCache": 3136533,
+      "conversations": 1,
+      "turns": 2,
+      "rows": [
+        {
+          "source": "codex",
+          "model": "gpt-6.1-terra-priority",
+          "cost": 0,
+          "input": 316313,
+          "output": 11416,
+          "reasoning": 1380,
+          "cacheRead": 2807424,
+          "cacheWrite": 0,
+          "tokens": 329109,
+          "tokensInclCache": 3136533
         }
       ]
     }
