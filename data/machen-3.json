@@ -1,22 +1,22 @@
 {
   "host": "machen-3",
   "schemaVersion": 2,
-  "updatedAt": "2026-11-07T21:00:07Z",
+  "updatedAt": "2026-11-10T21:00:11Z",
   "timezone": "UTC+8",
   "totals": {
-    "cost": 7462.4363,
-    "input": 264588874,
-    "output": 41780634,
-    "reasoning": 11370822,
-    "cacheRead": 12756405852,
+    "cost": 7463.8965,
+    "input": 270107777,
+    "output": 42928227,
+    "reasoning": 11498692,
+    "cacheRead": 13352785628,
     "cacheWrite": 57211628,
-    "tokens": 374951958,
-    "tokensInclCache": 13131357810,
-    "conversations": 613,
-    "turns": 31224,
-    "days": 120,
+    "tokens": 381746324,
+    "tokensInclCache": 13734531952,
+    "conversations": 622,
+    "turns": 32319,
+    "days": 123,
     "firstDate": "2026-02-28",
-    "lastDate": "2026-11-08"
+    "lastDate": "2026-11-11"
   },
   "unpricedModels": [
     "claude-sonnet-5-5",
@@ -24,6 +24,7 @@
     "gpt-6-luna",
     "gpt-6.1-sol",
     "gpt-6.1-sol-priority",
+    "gpt-6.1-terra",
     "gpt-6.1-terra-priority"
   ],
   "days": [
@@ -4395,7 +4396,7 @@
       "tokens": 2100607,
       "tokensInclCache": 101573873,
       "conversations": 9,
-      "turns": 335,
+      "turns": 342,
       "rows": [
         {
           "source": "claude-code",
@@ -4512,28 +4513,52 @@
     },
     {
       "date": "2026-11-08",
-      "cost": 0,
-      "input": 1041020,
-      "output": 24955,
-      "reasoning": 14959,
-      "cacheRead": 31881344,
+      "cost": 1.0929,
+      "input": 4881223,
+      "output": 780866,
+      "reasoning": 103020,
+      "cacheRead": 392812928,
       "cacheWrite": 0,
-      "tokens": 1080934,
-      "tokensInclCache": 32962278,
-      "conversations": 1,
-      "turns": 3,
+      "tokens": 5765109,
+      "tokensInclCache": 398578037,
+      "conversations": 7,
+      "turns": 803,
       "rows": [
+        {
+          "source": "claude-code",
+          "model": "deepseek-flash",
+          "cost": 1.0929,
+          "input": 851849,
+          "output": 624154,
+          "reasoning": 0,
+          "cacheRead": 196867584,
+          "cacheWrite": 0,
+          "tokens": 1476003,
+          "tokensInclCache": 198343587
+        },
         {
           "source": "codex",
           "model": "gpt-6.1-sol",
           "cost": 0,
-          "input": 521663,
-          "output": 6830,
-          "reasoning": 7055,
-          "cacheRead": 18893184,
+          "input": 2525511,
+          "output": 90686,
+          "reasoning": 87652,
+          "cacheRead": 127648640,
           "cacheWrite": 0,
-          "tokens": 535548,
-          "tokensInclCache": 19428732
+          "tokens": 2703849,
+          "tokensInclCache": 130352489
+        },
+        {
+          "source": "codex",
+          "model": "gpt-6.1-terra",
+          "cost": 0,
+          "input": 984506,
+          "output": 47901,
+          "reasoning": 7464,
+          "cacheRead": 55308544,
+          "cacheWrite": 0,
+          "tokens": 1039871,
+          "tokensInclCache": 56348415
         },
         {
           "source": "codex",
@@ -4546,6 +4571,123 @@
           "cacheWrite": 0,
           "tokens": 545386,
           "tokensInclCache": 13533546
+        }
+      ]
+    },
+    {
+      "date": "2026-11-09",
+      "cost": 0.0708,
+      "input": 1318186,
+      "output": 151952,
+      "reasoning": 34944,
+      "cacheRead": 168936192,
+      "cacheWrite": 0,
+      "tokens": 1505082,
+      "tokensInclCache": 170441274,
+      "conversations": 2,
+      "turns": 81,
+      "rows": [
+        {
+          "source": "claude-code",
+          "model": "deepseek-flash",
+          "cost": 0.0708,
+          "input": 181359,
+          "output": 40659,
+          "reasoning": 0,
+          "cacheRead": 6392704,
+          "cacheWrite": 0,
+          "tokens": 222018,
+          "tokensInclCache": 6614722
+        },
+        {
+          "source": "codex",
+          "model": "gpt-6.1-terra",
+          "cost": 0,
+          "input": 1076511,
+          "output": 100183,
+          "reasoning": 33169,
+          "cacheRead": 159782528,
+          "cacheWrite": 0,
+          "tokens": 1209863,
+          "tokensInclCache": 160992391
+        },
+        {
+          "source": "codex",
+          "model": "gpt-6.1-sol",
+          "cost": 0,
+          "input": 60316,
+          "output": 11110,
+          "reasoning": 1775,
+          "cacheRead": 2760960,
+          "cacheWrite": 0,
+          "tokens": 73201,
+          "tokensInclCache": 2834161
+        }
+      ]
+    },
+    {
+      "date": "2026-11-10",
+      "cost": 0.1233,
+      "input": 291089,
+      "output": 105233,
+      "reasoning": 4865,
+      "cacheRead": 39156736,
+      "cacheWrite": 0,
+      "tokens": 401187,
+      "tokensInclCache": 39557923,
+      "conversations": 1,
+      "turns": 207,
+      "rows": [
+        {
+          "source": "claude-code",
+          "model": "deepseek-flash",
+          "cost": 0.1233,
+          "input": 122164,
+          "output": 83250,
+          "reasoning": 0,
+          "cacheRead": 11056128,
+          "cacheWrite": 0,
+          "tokens": 205414,
+          "tokensInclCache": 11261542
+        },
+        {
+          "source": "codex",
+          "model": "gpt-6.1-terra",
+          "cost": 0,
+          "input": 168925,
+          "output": 21983,
+          "reasoning": 4865,
+          "cacheRead": 28100608,
+          "cacheWrite": 0,
+          "tokens": 195773,
+          "tokensInclCache": 28296381
+        }
+      ]
+    },
+    {
+      "date": "2026-11-11",
+      "cost": 0.1732,
+      "input": 69425,
+      "output": 134497,
+      "reasoning": 0,
+      "cacheRead": 27355264,
+      "cacheWrite": 0,
+      "tokens": 203922,
+      "tokensInclCache": 27559186,
+      "conversations": 0,
+      "turns": 0,
+      "rows": [
+        {
+          "source": "claude-code",
+          "model": "deepseek-flash",
+          "cost": 0.1732,
+          "input": 69425,
+          "output": 134497,
+          "reasoning": 0,
+          "cacheRead": 27355264,
+          "cacheWrite": 0,
+          "tokens": 203922,
+          "tokensInclCache": 27559186
         }
       ]
     }
